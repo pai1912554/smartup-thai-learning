@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartUp - ปั้นคนเก่งจากศูนย์</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#9733;</span>
+                <span class="logo-text">Smart<span class="highlight">Up</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">หน้าแรก</a></li>
+                <li><a href="#subjects">วิชาเรียน</a></li>
+                <li><a href="#method">วิธีการเรียน</a></li>
+                <li><a href="#progress">ความก้าวหน้า</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">&#127891; แพลตฟอร์มการเรียนรู้แบบเข้าใจจริง</div>
+            <h1 class="hero-title">
+                ปั้นคนเก่ง<br>
+                <span class="gradient-text">จากศูนย์สู่ร้อย</span>
+            </h1>
+            <p class="hero-subtitle">
+                เรียนรู้คณิตศาสตร์ วิทยาศาสตร์ และภาษาอังกฤษ
+                ตามหลักสูตรแกนกลาง ด้วยวิธีที่ทำให้เข้าใจอย่างแท้จริง
+                ไม่ใช่แค่ท่องจำ แต่เข้าใจที่มาที่ไป
+            </p>
+            <div class="hero-buttons">
+                <a href="#subjects" class="btn btn-primary">เริ่มเรียนเลย &#10140;</a>
+                <a href="#method" class="btn btn-outline">ดูวิธีการเรียน</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">วิชาหลัก</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">บทเรียน</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="200">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">แบบทดสอบ</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <div class="card-icon">&#128202;</div>
+                <div class="card-text">คณิตศาสตร์</div>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon">&#128300;</div>
+                <div class="card-text">วิทยาศาสตร์</div>
+            </div>
+            <div class="floating-card card-3">
+                <div class="card-icon">&#127758;</div>
+                <div class="card-text">ภาษาอังกฤษ</div>
+            </div>
+            <div class="floating-card card-4">
+                <div class="card-icon">&#128290;</div>
+                <div class="card-text">คณิตเพิ่มเติม</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Method Section -->
+    <section class="method-section" id="method">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&#128161; วิธีการเรียนรู้</span>
+                <h2 class="section-title">เข้าใจจริง ไม่ใช่แค่ท่องจำ</h2>
+                <p class="section-desc">ระบบการเรียนรู้ 4 ขั้นตอนที่ออกแบบมาเพื่อให้คุณเข้าใจอย่างลึกซึ้ง</p>
+            </div>
+            <div class="method-grid">
+                <div class="method-card">
+                    <div class="method-step">1</div>
+                    <div class="method-icon">&#128065;</div>
+                    <h3>เห็นภาพ</h3>
+                    <p>ทุกแนวคิดมีภาพประกอบและไดอะแกรมที่ช่วยให้เห็นภาพรวม เข้าใจได้ง่ายขึ้น</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-step">2</div>
+                    <div class="method-icon">&#128218;</div>
+                    <h3>รู้ที่มา</h3>
+                    <p>ไม่ใช่แค่บอกว่า "สูตรนี้คืออะไร" แต่อธิบายว่า "ทำไมถึงเป็นแบบนี้" มันมาจากไหน</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-step">3</div>
+                    <div class="method-icon">&#9997;</div>
+                    <h3>ลงมือทำ</h3>
+                    <p>แบบฝึกหัดที่ไล่ระดับจากง่ายไปยาก พร้อมคำอธิบายทุกข้อ ผิดแล้วรู้ว่าผิดตรงไหน</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-step">4</div>
+                    <div class="method-icon">&#127942;</div>
+                    <h3>ทดสอบ</h3>
+                    <p>แบบทดสอบท้ายบท วัดความเข้าใจ พร้อมรายงานจุดแข็งจุดอ่อน</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="subjects-section" id="subjects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&#128218; วิชาเรียน</span>
+                <h2 class="section-title">เลือกวิชาที่ต้องการเรียน</h2>
+                <p class="section-desc">4 วิชาหลักตามหลักสูตรแกนกลาง ออกแบบมาให้เข้าใจง่าย</p>
+            </div>
+            <div class="subjects-grid">
+                <!-- Math -->
+                <div class="subject-card" onclick="window.location.href='math.html'">
+                    <div class="subject-bg math-bg"></div>
+                    <div class="subject-content">
+                        <div class="subject-icon-wrap math-icon">
+                            <svg viewBox="0 0 100 100" class="subject-svg">
+                                <text x="50" y="35" text-anchor="middle" font-size="24" fill="white">&#8721;</text>
+                                <text x="50" y="65" text-anchor="middle" font-size="20" fill="white">x+y</text>
+                                <text x="50" y="90" text-anchor="middle" font-size="18" fill="rgba(255,255,255,0.7)">=z</text>
+                            </svg>
+                        </div>
+                        <h3 class="subject-name">คณิตศาสตร์</h3>
+                        <p class="subject-desc">จำนวนจริง พหุนาม สมการ เรขาคณิต สถิติ</p>
+                        <div class="subject-topics">
+                            <span class="topic-tag">จำนวนจริง</span>
+                            <span class="topic-tag">พหุนาม</span>
+                            <span class="topic-tag">สมการ</span>
+                            <span class="topic-tag">เรขาคณิต</span>
+                        </div>
+                        <div class="subject-meta">
+                            <span>&#128214; 12 บทเรียน</span>
+                            <span>&#128221; 60 แบบทดสอบ</span>
+                        </div>
+                        <span class="subject-btn">เริ่มเรียน &#10140;</span>
+                    </div>
+                </div>
+
+                <!-- Science -->
+                <div class="subject-card" onclick="window.location.href='science.html'">
+                    <div class="subject-bg science-bg"></div>
+                    <div class="subject-content">
+                        <div class="subject-icon-wrap science-icon">
+                            <svg viewBox="0 0 100 100" class="subject-svg">
+                                <circle cx="50" cy="40" r="12" fill="none" stroke="white" stroke-width="2"/>
+                                <ellipse cx="50" cy="40" rx="30" ry="10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" transform="rotate(60,50,40)"/>
+                                <ellipse cx="50" cy="40" rx="30" ry="10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" transform="rotate(-60,50,40)"/>
+                                <ellipse cx="50" cy="40" rx="30" ry="10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+                                <text x="50" y="85" text-anchor="middle" font-size="14" fill="white">ATOM</text>
+                            </svg>
+                        </div>
+                        <h3 class="subject-name">วิทยาศาสตร์</h3>
+                        <p class="subject-desc">ฟิสิกส์ เคมี ชีววิทยา พลังงาน</p>
+                        <div class="subject-topics">
+                            <span class="topic-tag">แรงและการเคลื่อนที่</span>
+                            <span class="topic-tag">อะตอม</span>
+                            <span class="topic-tag">พลังงาน</span>
+                            <span class="topic-tag">เซลล์</span>
+                        </div>
+                        <div class="subject-meta">
+                            <span>&#128214; 15 บทเรียน</span>
+                            <span>&#128221; 75 แบบทดสอบ</span>
+                        </div>
+                        <span class="subject-btn">เริ่มเรียน &#10140;</span>
+                    </div>
+                </div>
+
+                <!-- English -->
+                <div class="subject-card" onclick="window.location.href='english.html'">
+                    <div class="subject-bg english-bg"></div>
+                    <div class="subject-content">
+                        <div class="subject-icon-wrap english-icon">
+                            <svg viewBox="0 0 100 100" class="subject-svg">
+                                <text x="50" y="35" text-anchor="middle" font-size="28" fill="white" font-weight="bold">Aa</text>
+                                <text x="50" y="60" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.8)">Grammar</text>
+                                <text x="50" y="80" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.6)">Vocabulary</text>
+                            </svg>
+                        </div>
+                        <h3 class="subject-name">ภาษาอังกฤษ</h3>
+                        <p class="subject-desc">ไวยากรณ์ คำศัพท์ การอ่าน การเขียน</p>
+                        <div class="subject-topics">
+                            <span class="topic-tag">Tenses</span>
+                            <span class="topic-tag">Grammar</span>
+                            <span class="topic-tag">Reading</span>
+                            <span class="topic-tag">Vocabulary</span>
+                        </div>
+                        <div class="subject-meta">
+                            <span>&#128214; 12 บทเรียน</span>
+                            <span>&#128221; 50 แบบทดสอบ</span>
+                        </div>
+                        <span class="subject-btn">เริ่มเรียน &#10140;</span>
+                    </div>
+                </div>
+
+                <!-- Additional Math -->
+                <div class="subject-card" onclick="window.location.href='math-extra.html'">
+                    <div class="subject-bg mathextra-bg"></div>
+                    <div class="subject-content">
+                        <div class="subject-icon-wrap mathextra-icon">
+                            <svg viewBox="0 0 100 100" class="subject-svg">
+                                <text x="50" y="30" text-anchor="middle" font-size="16" fill="white">f(x)</text>
+                                <path d="M15 70 Q35 20 50 50 Q65 80 85 30" fill="none" stroke="white" stroke-width="2.5"/>
+                                <text x="50" y="95" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.7)">sin cos tan</text>
+                            </svg>
+                        </div>
+                        <h3 class="subject-name">คณิตศาสตร์เพิ่มเติม</h3>
+                        <p class="subject-desc">เซต ตรรกศาสตร์ ฟังก์ชัน ตรีโกณมิติ</p>
+                        <div class="subject-topics">
+                            <span class="topic-tag">เซต</span>
+                            <span class="topic-tag">ฟังก์ชัน</span>
+                            <span class="topic-tag">ตรีโกณมิติ</span>
+                            <span class="topic-tag">แคลคูลัส</span>
+                        </div>
+                        <div class="subject-meta">
+                            <span>&#128214; 14 บทเรียน</span>
+                            <span>&#128221; 70 แบบทดสอบ</span>
+                        </div>
+                        <span class="subject-btn">เริ่มเรียน &#10140;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="progress-section" id="progress">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&#128200; ความก้าวหน้า</span>
+                <h2 class="section-title">ติดตามพัฒนาการของคุณ</h2>
+            </div>
+            <div class="progress-dashboard">
+                <div class="progress-card">
+                    <h4>&#128202; คณิตศาสตร์</h4>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" data-progress="0" style="--bar-color: #667eea"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+                <div class="progress-card">
+                    <h4>&#128300; วิทยาศาสตร์</h4>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" data-progress="0" style="--bar-color: #2ed573"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+                <div class="progress-card">
+                    <h4>&#127758; ภาษาอังกฤษ</h4>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" data-progress="0" style="--bar-color: #ff6b6b"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+                <div class="progress-card">
+                    <h4>&#128290; คณิตเพิ่มเติม</h4>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" data-progress="0" style="--bar-color: #ffa502"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+            </div>
+            <div class="score-summary" id="scoreSummary">
+                <div class="score-card">
+                    <div class="score-number" id="totalLessons">0</div>
+                    <div class="score-label">บทเรียนที่เรียนแล้ว</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-number" id="totalQuizzes">0</div>
+                    <div class="score-label">แบบทดสอบที่ทำแล้ว</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-number" id="avgScore">0%</div>
+                    <div class="score-label">คะแนนเฉลี่ย</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">&#9733;</span>
+                    <span class="logo-text">Smart<span class="highlight">Up</span></span>
+                    <p>ปั้นคนเก่งจากศูนย์ เรียนรู้อย่างเข้าใจ</p>
+                </div>
+                <div class="footer-links">
+                    <h4>วิชาเรียน</h4>
+                    <a href="math.html">คณิตศาสตร์</a>
+                    <a href="science.html">วิทยาศาสตร์</a>
+                    <a href="english.html">ภาษาอังกฤษ</a>
+                    <a href="math-extra.html">คณิตศาสตร์เพิ่มเติม</a>
+                </div>
+                <div class="footer-links">
+                    <h4>เกี่ยวกับ</h4>
+                    <a href="#method">วิธีการเรียน</a>
+                    <a href="#progress">ความก้าวหน้า</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>SmartUp &copy; 2026 - ระบบการเรียนรู้ตามหลักสูตรแกนกลาง</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        if (!Auth.isLoggedIn()) { window.location.href = 'auth.html'; }
+    </script>
+</body>
+</html>

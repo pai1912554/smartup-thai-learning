@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์ - SmartUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .profile-page { padding-top: 90px; min-height: 100vh; padding-bottom: 60px; }
+        .profile-header { display: flex; align-items: center; gap: 24px; padding: 40px 0; flex-wrap: wrap; }
+        .profile-avatar { width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; background: var(--gradient-1); flex-shrink: 0; }
+        .profile-info h1 { font-size: 1.8rem; font-weight: 700; }
+        .profile-info .level-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(102,126,234,0.15); color: var(--primary); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-top: 8px; }
+        .profile-info .title-text { color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px; }
+
+        .xp-bar-section { margin: 8px 0 0; }
+        .xp-bar-wrap { background: rgba(255,255,255,0.05); border-radius: 10px; height: 12px; overflow: hidden; max-width: 300px; }
+        .xp-bar { height: 100%; border-radius: 10px; background: var(--gradient-1); transition: width 1s ease; }
+        .xp-text { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 24px; text-align: center; }
+        .stat-card .stat-icon { font-size: 1.8rem; margin-bottom: 8px; }
+        .stat-card .stat-val { font-size: 1.8rem; font-weight: 700; background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .stat-card .stat-lbl { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+
+        .section-box { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; }
+        .section-box h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); }
+
+        .streak-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; max-width: 350px; }
+        .streak-day { width: 100%; aspect-ratio: 1; border-radius: 6px; background: rgba(255,255,255,0.03); border: 1px solid transparent; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: var(--text-muted); }
+        .streak-day.active { background: rgba(46,213,115,0.25); border-color: rgba(46,213,115,0.4); color: #2ed573; }
+        .streak-day.today { border-color: var(--primary); }
+        .streak-info { display: flex; gap: 24px; margin-bottom: 16px; }
+        .streak-info .big { font-size: 2rem; font-weight: 700; color: #ffa502; }
+        .streak-info .lbl { font-size: 0.8rem; color: var(--text-muted); }
+
+        .achievement-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+        .ach-card { background: rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 16px; display: flex; align-items: center; gap: 12px; transition: var(--transition); }
+        .ach-card.earned { border-color: rgba(255,165,2,0.3); background: rgba(255,165,2,0.05); }
+        .ach-card.locked { opacity: 0.4; }
+        .ach-icon { font-size: 1.8rem; flex-shrink: 0; }
+        .ach-info .ach-name { font-size: 0.9rem; font-weight: 600; }
+        .ach-info .ach-desc { font-size: 0.75rem; color: var(--text-muted); }
+        .ach-info .ach-xp { font-size: 0.7rem; color: var(--primary); }
+
+        .quiz-history-list { max-height: 300px; overflow-y: auto; }
+        .qh-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-color); font-size: 0.88rem; }
+        .qh-item:last-child { border-bottom: none; }
+        .qh-subject { color: var(--text-secondary); }
+        .qh-score { font-weight: 600; }
+        .qh-score.good { color: #2ed573; }
+        .qh-score.ok { color: #ffa502; }
+        .qh-score.bad { color: #ff6b6b; }
+        .qh-date { font-size: 0.75rem; color: var(--text-muted); }
+
+        .logout-btn { background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.3); color: #ff6b6b; padding: 10px 24px; border-radius: var(--radius-sm); font-family: 'Prompt'; font-size: 0.9rem; cursor: pointer; transition: var(--transition); }
+        .logout-btn:hover { background: rgba(255,107,107,0.2); }
+
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .profile-header { text-align: center; flex-direction: column; }
+            .xp-bar-wrap { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">&#9733;</span><span class="logo-text">Smart<span class="highlight">Up</span></span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#subjects">วิชาเรียน</a></li>
+                <li><a href="leaderboard.html">&#127942; อันดับ</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="profile-page">
+        <div class="container" id="profileContent"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        if (!Auth.isLoggedIn()) { window.location.href = 'auth.html'; }
+
+        function renderProfile() {
+            const user = Auth.getCurrentUser();
+            if (!user) return;
+
+            const levelInfo = XPSystem.getLevel(user.xp);
+            const nextLevel = XPSystem.getNextLevel(user.xp);
+            const progress = XPSystem.getProgress(user.xp);
+            const totalQuizzes = user.quizHistory ? user.quizHistory.length : 0;
+            const avgScore = totalQuizzes > 0 ? Math.round(user.quizHistory.reduce((s, q) => s + q.percent, 0) / totalQuizzes) : 0;
+            const totalAch = user.achievements ? user.achievements.length : 0;
+
+            const subjectNames = { math: 'คณิตศาสตร์', science: 'วิทยาศาสตร์', english: 'ภาษาอังกฤษ', mathExtra: 'คณิตเพิ่มเติม' };
+
+            let streakCalHTML = '';
+            const today = new Date();
+            for (let i = 29; i >= 0; i--) {
+                const d = new Date(today);
+                d.setDate(d.getDate() - i);
+                const dateStr = d.toISOString().split('T')[0];
+                const isActive = user.checkInDays && user.checkInDays.includes(dateStr);
+                const isToday = i === 0;
+                streakCalHTML += `<div class="streak-day ${isActive ? 'active' : ''} ${isToday ? 'today' : ''}">${d.getDate()}</div>`;
+            }
+
+            const allAch = Achievements.getAll();
+            let achHTML = '';
+            allAch.forEach(a => {
+                const earned = user.achievements && user.achievements.includes(a.id);
+                achHTML += `
+                    <div class="ach-card ${earned ? 'earned' : 'locked'}">
+                        <div class="ach-icon">${a.icon}</div>
+                        <div class="ach-info">
+                            <div class="ach-name">${a.name}</div>
+                            <div class="ach-desc">${a.desc}</div>
+                            <div class="ach-xp">+${a.xp} XP</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            let historyHTML = '';
+            if (user.quizHistory && user.quizHistory.length > 0) {
+                const sorted = [...user.quizHistory].reverse().slice(0, 20);
+                sorted.forEach(q => {
+                    const cls = q.percent >= 80 ? 'good' : q.percent >= 50 ? 'ok' : 'bad';
+                    const date = new Date(q.date).toLocaleDateString('th-TH', { day: 'numeric', month: 'short' });
+                    historyHTML += `
+                        <div class="qh-item">
+                            <span class="qh-subject">${subjectNames[q.subject] || q.subject}</span>
+                            <span class="qh-score ${cls}">${q.percent}% (${q.correct}/${q.total})</span>
+                            <span class="qh-date">${date}</span>
+                        </div>
+                    `;
+                });
+            } else {
+                historyHTML = '<p style="color:var(--text-muted);text-align:center;padding:20px;">ยังไม่มีประวัติการทำแบบทดสอบ</p>';
+            }
+
+            document.getElementById('profileContent').innerHTML = `
+                <div class="profile-header">
+                    <div class="profile-avatar">${user.displayName.charAt(0)}</div>
+                    <div class="profile-info">
+                        <h1>${user.displayName}</h1>
+                        <div class="title-text">@${user.username}</div>
+                        <div class="level-tag">&#11088; Level ${levelInfo.level} - ${levelInfo.title}</div>
+                        <div class="xp-bar-section">
+                            <div class="xp-bar-wrap"><div class="xp-bar" style="width:${progress}%"></div></div>
+                            <div class="xp-text">${user.xp} XP ${nextLevel ? `/ ${nextLevel.xp} XP (ถึง Lv.${nextLevel.level})` : '(MAX LEVEL!)'}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">&#11088;</div>
+                        <div class="stat-val">${user.xp}</div>
+                        <div class="stat-lbl">XP สะสม</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#128293;</div>
+                        <div class="stat-val">${user.streak}</div>
+                        <div class="stat-lbl">Streak วัน</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#128221;</div>
+                        <div class="stat-val">${totalQuizzes}</div>
+                        <div class="stat-lbl">แบบทดสอบ</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#127942;</div>
+                        <div class="stat-val">${avgScore}%</div>
+                        <div class="stat-lbl">คะแนนเฉลี่ย</div>
+                    </div>
+                </div>
+
+                <div class="section-box">
+                    <h2>&#128293; เช็คอิน (30 วันล่าสุด)</h2>
+                    <div class="streak-info">
+                        <div><div class="big">${user.streak}</div><div class="lbl">Streak ปัจจุบัน</div></div>
+                        <div><div class="big">${user.checkInDays ? user.checkInDays.length : 0}</div><div class="lbl">เช็คอินทั้งหมด</div></div>
+                        <div><div class="big">${totalAch}</div><div class="lbl">Achievements</div></div>
+                    </div>
+                    <div class="streak-cal">${streakCalHTML}</div>
+                </div>
+
+                <div class="section-box">
+                    <h2>&#127942; Achievements (${totalAch}/${allAch.length})</h2>
+                    <div class="achievement-grid">${achHTML}</div>
+                </div>
+
+                <div class="section-box">
+                    <h2>&#128202; ประวัติแบบทดสอบ</h2>
+                    <div class="quiz-history-list">${historyHTML}</div>
+                </div>
+
+                <div style="text-align:center;margin-top:24px;">
+                    <button class="logout-btn" onclick="Auth.logout()">&#128682; ออกจากระบบ</button>
+                </div>
+            `;
+        }
+
+        renderProfile();
+    </script>
+</body>
+</html>

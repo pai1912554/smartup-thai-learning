@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตารางอันดับ - SmartUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lb-page { padding-top: 90px; min-height: 100vh; }
+        .lb-hero { padding: 40px 0; text-align: center; }
+        .lb-hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+        .lb-hero p { color: var(--text-secondary); }
+        .lb-tabs { display: flex; gap: 8px; justify-content: center; margin: 24px 0 32px; flex-wrap: wrap; }
+        .lb-tab { padding: 10px 24px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: 30px; font-family: 'Prompt'; font-size: 0.88rem; cursor: pointer; transition: var(--transition); }
+        .lb-tab:hover, .lb-tab.active { background: var(--gradient-1); color: white; border-color: transparent; }
+        .lb-grid { max-width: 800px; margin: 0 auto; }
+
+        .lb-podium { display: flex; justify-content: center; align-items: flex-end; gap: 16px; margin-bottom: 40px; }
+        .podium-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 24px 20px; text-align: center; transition: var(--transition); width: 180px; }
+        .podium-card:hover { transform: translateY(-5px); }
+        .podium-1 { border-color: #ffd700; box-shadow: 0 8px 30px rgba(255,215,0,0.15); order: 2; padding-bottom: 40px; }
+        .podium-2 { border-color: #c0c0c0; order: 1; }
+        .podium-3 { border-color: #cd7f32; order: 3; }
+        .podium-rank { font-size: 2.5rem; margin-bottom: 8px; }
+        .podium-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+        .podium-level { font-size: 0.8rem; color: var(--primary); margin-bottom: 8px; }
+        .podium-xp { font-size: 1.3rem; font-weight: 700; background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .podium-xp-label { font-size: 0.75rem; color: var(--text-muted); }
+
+        .lb-table { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); overflow: hidden; }
+        .lb-row { display: grid; grid-template-columns: 60px 1fr 100px 80px 80px; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--border-color); transition: var(--transition); }
+        .lb-row:last-child { border-bottom: none; }
+        .lb-row:hover { background: rgba(255,255,255,0.02); }
+        .lb-row.me { background: rgba(102,126,234,0.08); border-left: 3px solid var(--primary); }
+        .lb-header { background: rgba(0,0,0,0.2); font-weight: 600; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+        .lb-rank { font-size: 1.1rem; font-weight: 700; text-align: center; }
+        .lb-rank.gold { color: #ffd700; }
+        .lb-rank.silver { color: #c0c0c0; }
+        .lb-rank.bronze { color: #cd7f32; }
+        .lb-user { display: flex; align-items: center; gap: 12px; }
+        .lb-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; color: white; }
+        .lb-username { font-weight: 500; font-size: 0.92rem; }
+        .lb-detail { font-size: 0.88rem; color: var(--text-secondary); text-align: center; }
+        .lb-detail.xp { color: var(--primary); font-weight: 600; }
+
+        .lb-empty { text-align: center; padding: 60px 24px; color: var(--text-muted); }
+        .lb-empty .icon { font-size: 3rem; margin-bottom: 16px; }
+
+        @media (max-width: 640px) {
+            .lb-podium { flex-direction: column; align-items: center; }
+            .podium-1, .podium-2, .podium-3 { order: unset; width: 100%; max-width: 300px; }
+            .lb-row { grid-template-columns: 50px 1fr 80px 60px; }
+            .lb-row .lb-streak-col { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">&#9733;</span><span class="logo-text">Smart<span class="highlight">Up</span></span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#subjects">วิชาเรียน</a></li>
+                <li><a href="#" class="active">&#127942; อันดับ</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="lb-page">
+        <div class="container">
+            <div class="lb-hero">
+                <h1>&#127942; ตารางอันดับ</h1>
+                <p>แข่งกับเพื่อนๆ ดูว่าใครสะสมความรู้ได้มากที่สุด!</p>
+            </div>
+
+            <div class="lb-tabs">
+                <button class="lb-tab active" onclick="sortLeaderboard('xp')">&#11088; XP สูงสุด</button>
+                <button class="lb-tab" onclick="sortLeaderboard('streak')">&#128293; Streak ยาวสุด</button>
+                <button class="lb-tab" onclick="sortLeaderboard('avgScore')">&#127942; คะแนนเฉลี่ย</button>
+                <button class="lb-tab" onclick="sortLeaderboard('totalQuizzes')">&#128221; ทำข้อสอบมากสุด</button>
+            </div>
+
+            <div class="lb-grid">
+                <div class="lb-podium" id="podium"></div>
+                <div class="lb-table" id="leaderboardTable"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top:60px;">
+        <div class="container"><div class="footer-bottom"><p>SmartUp &copy; 2026</p></div></div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        const avatarColors = ['#667eea','#2ed573','#ff6b6b','#ffa502','#f093fb','#5352ed','#ff4757','#1e90ff','#ff6348','#7bed9f'];
+
+        function getAvatarColor(name) {
+            let hash = 0;
+            for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash);
+            return avatarColors[Math.abs(hash) % avatarColors.length];
+        }
+
+        function sortLeaderboard(sortBy) {
+            document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            renderLeaderboard(sortBy);
+        }
+
+        function renderLeaderboard(sortBy = 'xp') {
+            const rankings = Leaderboard.getRankings(sortBy);
+            const session = Auth.getSession();
+            const currentUser = session ? session.username : null;
+
+            const podiumEl = document.getElementById('podium');
+            const tableEl = document.getElementById('leaderboardTable');
+
+            if (rankings.length === 0) {
+                podiumEl.innerHTML = '';
+                tableEl.innerHTML = `
+                    <div class="lb-empty">
+                        <div class="icon">&#128566;</div>
+                        <h3>ยังไม่มีผู้เข้าร่วม</h3>
+                        <p>เป็นคนแรกที่สมัครและเริ่มเรียนเลย!</p>
+                        <a href="auth.html" class="btn btn-primary" style="margin-top:16px;">สมัครสมาชิก</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const medals = ['&#129351;', '&#129352;', '&#129353;'];
+            const top3 = rankings.slice(0, 3);
+
+            let podiumHTML = '';
+            const podiumOrder = [1, 0, 2];
+            podiumOrder.forEach(idx => {
+                if (!top3[idx]) return;
+                const u = top3[idx];
+                const color = getAvatarColor(u.username);
+                const classNum = idx === 0 ? 'podium-1' : idx === 1 ? 'podium-2' : 'podium-3';
+                const labelMap = { xp: `${u.xp} XP`, streak: `${u.streak} วัน`, avgScore: `${u.avgScore}%`, totalQuizzes: `${u.totalQuizzes} ครั้ง` };
+                podiumHTML += `
+                    <div class="podium-card ${classNum}">
+                        <div class="podium-rank">${medals[idx]}</div>
+                        <div style="width:50px;height:50px;border-radius:50%;background:${color};display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:1.2rem;font-weight:700;color:white;">${u.displayName.charAt(0)}</div>
+                        <div class="podium-name">${u.displayName}</div>
+                        <div class="podium-level">Lv.${u.level} | ${XPSystem.getLevel(u.xp).title}</div>
+                        <div class="podium-xp">${labelMap[sortBy]}</div>
+                    </div>
+                `;
+            });
+            podiumEl.innerHTML = podiumHTML;
+
+            let tableHTML = `
+                <div class="lb-row lb-header">
+                    <div style="text-align:center;">#</div>
+                    <div>ผู้เรียน</div>
+                    <div style="text-align:center;">XP</div>
+                    <div style="text-align:center;">Streak</div>
+                    <div style="text-align:center;" class="lb-streak-col">คะแนน</div>
+                </div>
+            `;
+
+            rankings.forEach((u, idx) => {
+                const color = getAvatarColor(u.username);
+                const isMe = u.username === currentUser;
+                const rankClass = idx === 0 ? 'gold' : idx === 1 ? 'silver' : idx === 2 ? 'bronze' : '';
+                const rankText = idx < 3 ? medals[idx] : (idx + 1);
+                tableHTML += `
+                    <div class="lb-row ${isMe ? 'me' : ''}">
+                        <div class="lb-rank ${rankClass}">${rankText}</div>
+                        <div class="lb-user">
+                            <div class="lb-avatar" style="background:${color}">${u.displayName.charAt(0)}</div>
+                            <div>
+                                <div class="lb-username">${u.displayName} ${isMe ? '<span style="color:var(--primary);font-size:0.75rem;">(คุณ)</span>' : ''}</div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);">Lv.${u.level}</div>
+                            </div>
+                        </div>
+                        <div class="lb-detail xp">${u.xp}</div>
+                        <div class="lb-detail">${u.streak} &#128293;</div>
+                        <div class="lb-detail lb-streak-col">${u.avgScore}%</div>
+                    </div>
+                `;
+            });
+
+            tableEl.innerHTML = tableHTML;
+        }
+
+        renderLeaderboard('xp');
+    </script>
+</body>
+</html>

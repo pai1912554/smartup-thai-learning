@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาษาอังกฤษ - SmartUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#9733;</span>
+                <span class="logo-text">Smart<span class="highlight">Up</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#subjects">วิชาเรียน</a></li>
+                <li><a href="#" class="active">ภาษาอังกฤษ</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-page">
+        <div class="lesson-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">หน้าแรก</a> <span>/</span>
+                    <a href="index.html#subjects">วิชาเรียน</a> <span>/</span>
+                    <span>ภาษาอังกฤษ</span>
+                </div>
+                <h1>&#127758; ภาษาอังกฤษ (English)</h1>
+                <p>เข้าใจไวยากรณ์อังกฤษอย่างเป็นระบบ รู้ที่มา ไม่ใช่แค่ท่องจำ</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="lesson-layout">
+                <div class="lesson-sidebar">
+                    <div class="sidebar-card">
+                        <h3>&#128214; สารบัญ</h3>
+                        <ul class="chapter-list">
+                            <li><a href="#ch1" class="active"><span class="chapter-num">1</span>Tenses (กาล)</a></li>
+                            <li><a href="#ch2"><span class="chapter-num">2</span>Parts of Speech</a></li>
+                            <li><a href="#ch3"><span class="chapter-num">3</span>Sentence Structure</a></li>
+                            <li><a href="#quiz"><span class="chapter-num">&#10003;</span>แบบทดสอบ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lesson-content">
+
+                    <!-- Chapter 1: Tenses -->
+                    <div class="content-card" id="ch1">
+                        <h2>บทที่ 1: Tenses - ระบบกาลในภาษาอังกฤษ</h2>
+
+                        <p>Tense (กาล) คือระบบที่บอกว่าเหตุการณ์เกิดขึ้น "เมื่อไร" ภาษาอังกฤษมี 12 Tenses หลัก ฟังดูเยอะ แต่จริงๆ แล้วมีระบบที่เข้าใจง่าย ถ้าเรามองเป็นตาราง</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ทำไมภาษาอังกฤษต้องมี Tenses?</h4>
+                            <p>ภาษาไทยไม่มีการผันกริยาตามกาล (เราใช้คำช่วย เช่น "จะ" "แล้ว" "กำลัง") แต่ภาษาอังกฤษสืบทอดมาจากภาษาเยอรมัน ซึ่งผันกริยาตามเวลา ดังนั้นใน ภาษาอังกฤษ ตัวกริยาเองจะเปลี่ยนรูปเพื่อบอกเวลา เช่น go &#8594; went &#8594; gone</p>
+                        </div>
+
+                        <h3>&#128197; ระบบ Tenses: มองเป็นตาราง 3&#215;4</h3>
+
+                        <div class="visual-box english">
+                            <h4>&#128202; แผนผัง 12 Tenses</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 620 380" style="max-width: 600px; width: 100%;">
+                                    <!-- Timeline -->
+                                    <line x1="60" y1="30" x2="580" y2="30" stroke="#a0a0b8" stroke-width="2"/>
+                                    <polygon points="580,25 595,30 580,35" fill="#a0a0b8"/>
+
+                                    <!-- Time labels -->
+                                    <text x="180" y="20" text-anchor="middle" fill="#ff6b6b" font-size="13" font-weight="bold">PAST</text>
+                                    <text x="350" y="20" text-anchor="middle" fill="#2ed573" font-size="13" font-weight="bold">PRESENT</text>
+                                    <text x="520" y="20" text-anchor="middle" fill="#667eea" font-size="13" font-weight="bold">FUTURE</text>
+
+                                    <!-- Row headers -->
+                                    <text x="50" y="78" text-anchor="end" fill="#ffa502" font-size="11" font-weight="bold">Simple</text>
+                                    <text x="50" y="155" text-anchor="end" fill="#ffa502" font-size="11" font-weight="bold">Continuous</text>
+                                    <text x="50" y="232" text-anchor="end" fill="#ffa502" font-size="11" font-weight="bold">Perfect</text>
+                                    <text x="50" y="312" text-anchor="end" fill="#ffa502" font-size="11" font-weight="bold">Perfect</text>
+                                    <text x="50" y="328" text-anchor="end" fill="#ffa502" font-size="11" font-weight="bold">Continuous</text>
+
+                                    <!-- Simple Row -->
+                                    <rect x="80" y="52" width="170" height="48" rx="8" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="1"/>
+                                    <text x="165" y="72" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">Past Simple</text>
+                                    <text x="165" y="90" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">went</tspan></text>
+
+                                    <rect x="262" y="52" width="170" height="48" rx="8" fill="rgba(46,213,115,0.1)" stroke="#2ed573" stroke-width="1"/>
+                                    <text x="347" y="72" text-anchor="middle" fill="#2ed573" font-size="11" font-weight="bold">Present Simple</text>
+                                    <text x="347" y="90" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">go</tspan></text>
+
+                                    <rect x="444" y="52" width="170" height="48" rx="8" fill="rgba(102,126,234,0.1)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="529" y="72" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">Future Simple</text>
+                                    <text x="529" y="90" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">will go</tspan></text>
+
+                                    <!-- Continuous Row -->
+                                    <rect x="80" y="128" width="170" height="48" rx="8" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="1"/>
+                                    <text x="165" y="148" text-anchor="middle" fill="#ff6b6b" font-size="10" font-weight="bold">Past Continuous</text>
+                                    <text x="165" y="166" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">was going</tspan></text>
+
+                                    <rect x="262" y="128" width="170" height="48" rx="8" fill="rgba(46,213,115,0.1)" stroke="#2ed573" stroke-width="1"/>
+                                    <text x="347" y="148" text-anchor="middle" fill="#2ed573" font-size="10" font-weight="bold">Present Continuous</text>
+                                    <text x="347" y="166" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">am going</tspan></text>
+
+                                    <rect x="444" y="128" width="170" height="48" rx="8" fill="rgba(102,126,234,0.1)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="529" y="148" text-anchor="middle" fill="#667eea" font-size="10" font-weight="bold">Future Continuous</text>
+                                    <text x="529" y="166" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">will be going</tspan></text>
+
+                                    <!-- Perfect Row -->
+                                    <rect x="80" y="205" width="170" height="48" rx="8" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="1"/>
+                                    <text x="165" y="225" text-anchor="middle" fill="#ff6b6b" font-size="10" font-weight="bold">Past Perfect</text>
+                                    <text x="165" y="243" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">had gone</tspan></text>
+
+                                    <rect x="262" y="205" width="170" height="48" rx="8" fill="rgba(46,213,115,0.1)" stroke="#2ed573" stroke-width="1"/>
+                                    <text x="347" y="225" text-anchor="middle" fill="#2ed573" font-size="10" font-weight="bold">Present Perfect</text>
+                                    <text x="347" y="243" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">have gone</tspan></text>
+
+                                    <rect x="444" y="205" width="170" height="48" rx="8" fill="rgba(102,126,234,0.1)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="529" y="225" text-anchor="middle" fill="#667eea" font-size="10" font-weight="bold">Future Perfect</text>
+                                    <text x="529" y="243" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan fill="white" font-weight="bold">will have gone</tspan></text>
+
+                                    <!-- Perfect Continuous Row -->
+                                    <rect x="80" y="285" width="170" height="48" rx="8" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="1"/>
+                                    <text x="165" y="300" text-anchor="middle" fill="#ff6b6b" font-size="9" font-weight="bold">Past Perfect Cont.</text>
+                                    <text x="165" y="323" text-anchor="middle" fill="#a0a0b8" font-size="9">I <tspan fill="white" font-weight="bold">had been going</tspan></text>
+
+                                    <rect x="262" y="285" width="170" height="48" rx="8" fill="rgba(46,213,115,0.1)" stroke="#2ed573" stroke-width="1"/>
+                                    <text x="347" y="300" text-anchor="middle" fill="#2ed573" font-size="9" font-weight="bold">Present Perfect Cont.</text>
+                                    <text x="347" y="323" text-anchor="middle" fill="#a0a0b8" font-size="9">I <tspan fill="white" font-weight="bold">have been going</tspan></text>
+
+                                    <rect x="444" y="285" width="170" height="48" rx="8" fill="rgba(102,126,234,0.1)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="529" y="300" text-anchor="middle" fill="#667eea" font-size="9" font-weight="bold">Future Perfect Cont.</text>
+                                    <text x="529" y="323" text-anchor="middle" fill="#a0a0b8" font-size="9">I <tspan fill="white" font-weight="bold">will have been going</tspan></text>
+
+                                    <!-- Legend -->
+                                    <text x="350" y="365" text-anchor="middle" fill="#a0a0b8" font-size="10">3 เวลา (Past/Present/Future) &#215; 4 ลักษณะ (Simple/Continuous/Perfect/Perfect Continuous) = 12 Tenses</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>&#128269; เจาะลึก 3 Tenses สำคัญ</h3>
+
+                        <div class="example-box">
+                            <h4>&#127793; Present Simple - ความจริง / นิสัย / สิ่งที่ทำเป็นประจำ</h4>
+                            <div class="step">
+                                <span class="step-num">&#10003;</span>
+                                <span><strong>โครงสร้าง:</strong> Subject + V1 (เติม s/es สำหรับ he/she/it)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>The sun <strong>rises</strong> in the east. (ความจริง)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>She <strong>goes</strong> to school every day. (นิสัย)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>I <strong>don't like</strong> coffee. (ปฏิเสธ: don't/doesn't + V1)</span>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>&#128312; Past Simple - เหตุการณ์ที่จบแล้วในอดีต</h4>
+                            <div class="step">
+                                <span class="step-num">&#10003;</span>
+                                <span><strong>โครงสร้าง:</strong> Subject + V2 (กริยาช่อง 2)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>I <strong>went</strong> to the market yesterday. (go &#8594; went)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>She <strong>studied</strong> hard last night. (study &#8594; studied)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>They <strong>didn't come</strong> to the party. (ปฏิเสธ: didn't + V1)</span>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>&#128311; Present Perfect - อดีตเชื่อมปัจจุบัน</h4>
+                            <div class="step">
+                                <span class="step-num">&#10003;</span>
+                                <span><strong>โครงสร้าง:</strong> Subject + have/has + V3 (กริยาช่อง 3)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>I <strong>have lived</strong> here for 5 years. (ทำมาจนถึงปัจจุบัน)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>She <strong>has just finished</strong> her homework. (เพิ่งทำเสร็จ)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#128312;</span>
+                                <span>Have you <strong>ever been</strong> to Japan? (ประสบการณ์)</span>
+                            </div>
+                        </div>
+
+                        <div class="visual-box english">
+                            <h4>&#128202; เปรียบเทียบ Past Simple vs Present Perfect</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 180" style="max-width: 480px; width: 100%;">
+                                    <!-- Timeline 1: Past Simple -->
+                                    <text x="50" y="20" fill="#ff6b6b" font-size="12" font-weight="bold">Past Simple:</text>
+                                    <line x1="50" y1="45" x2="450" y2="45" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="450" y="40" fill="#a0a0b8" font-size="9">now</text>
+
+                                    <circle cx="180" cy="45" r="6" fill="#ff6b6b"/>
+                                    <text x="180" y="70" text-anchor="middle" fill="#ff6b6b" font-size="10">X จบแล้ว!</text>
+                                    <text x="250" y="35" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan font-weight="bold" fill="white">ate</tspan> breakfast.</text>
+
+                                    <!-- Timeline 2: Present Perfect -->
+                                    <text x="50" y="110" fill="#2ed573" font-size="12" font-weight="bold">Present Perfect:</text>
+                                    <line x1="50" y1="135" x2="450" y2="135" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="450" y="130" fill="#a0a0b8" font-size="9">now</text>
+
+                                    <line x1="150" y1="135" x2="420" y2="135" stroke="#2ed573" stroke-width="4" stroke-linecap="round"/>
+                                    <circle cx="420" cy="135" r="6" fill="#2ed573"/>
+                                    <text x="285" y="125" text-anchor="middle" fill="#a0a0b8" font-size="10">I <tspan font-weight="bold" fill="white">have eaten</tspan> breakfast.</text>
+                                    <text x="285" y="160" text-anchor="middle" fill="#2ed573" font-size="10">&#8594; ผลยังคงอยู่ (อิ่มอยู่)</text>
+                                </svg>
+                            </div>
+                            <p class="caption">Past Simple: เล่าเหตุการณ์ที่จบไปแล้ว | Present Perfect: ผลของเหตุการณ์ยังส่งถึงปัจจุบัน</p>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>&#128161; เคล็ดลับจำ Tenses</h4>
+                            <p><strong>Simple</strong> = ข้อเท็จจริง/นิสัย | <strong>Continuous</strong> = กำลังทำอยู่ (be + V-ing) | <strong>Perfect</strong> = เสร็จแล้ว/มีผลต่อเนื่อง (have + V3) | <strong>Perfect Continuous</strong> = ทำมาต่อเนื่อง (have been + V-ing)</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2: Parts of Speech -->
+                    <div class="content-card" id="ch2">
+                        <h2>บทที่ 2: Parts of Speech - ชนิดของคำ</h2>
+
+                        <p>ในภาษาอังกฤษ คำทุกคำจะถูกจัดเป็น 1 ใน 8 ประเภท (Parts of Speech) การรู้ว่าคำแต่ละคำทำหน้าที่อะไร จะช่วยให้เราเรียงประโยคได้ถูกต้อง</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ที่มา</h4>
+                            <p>ระบบ Parts of Speech มีต้นกำเนิดจากนักไวยากรณ์กรีกโบราณ ชื่อ Dionysius Thrax ในศตวรรษที่ 2 ก่อนคริสตกาล ซึ่งแบ่งคำในภาษากรีกเป็น 8 ประเภท ระบบนี้ถูกดัดแปลงมาใช้กับภาษาอังกฤษจนถึงปัจจุบัน</p>
+                        </div>
+
+                        <div class="visual-box english">
+                            <h4>&#128202; 8 Parts of Speech</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 560 300" style="max-width: 540px; width: 100%;">
+                                    <!-- Center -->
+                                    <circle cx="280" cy="150" r="40" fill="rgba(255,107,107,0.15)" stroke="#ff6b6b" stroke-width="2"/>
+                                    <text x="280" y="146" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Parts of</text>
+                                    <text x="280" y="162" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Speech</text>
+
+                                    <!-- 8 types -->
+                                    <rect x="230" y="15" width="100" height="38" rx="8" fill="rgba(102,126,234,0.2)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="280" y="30" text-anchor="middle" fill="#667eea" font-size="10" font-weight="bold">Noun</text>
+                                    <text x="280" y="45" text-anchor="middle" fill="#a0a0b8" font-size="8">คำนาม (cat, love)</text>
+                                    <line x1="280" y1="53" x2="280" y2="110" stroke="#667eea" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="405" y="42" width="120" height="38" rx="8" fill="rgba(46,213,115,0.2)" stroke="#2ed573" stroke-width="1.5"/>
+                                    <text x="465" y="57" text-anchor="middle" fill="#2ed573" font-size="10" font-weight="bold">Verb</text>
+                                    <text x="465" y="72" text-anchor="middle" fill="#a0a0b8" font-size="8">คำกริยา (run, eat)</text>
+                                    <line x1="405" y1="61" x2="320" y2="130" stroke="#2ed573" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="440" y="120" width="110" height="38" rx="8" fill="rgba(255,165,2,0.2)" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="495" y="135" text-anchor="middle" fill="#ffa502" font-size="10" font-weight="bold">Adjective</text>
+                                    <text x="495" y="150" text-anchor="middle" fill="#a0a0b8" font-size="8">คำคุณศัพท์ (big)</text>
+                                    <line x1="440" y1="139" x2="320" y2="150" stroke="#ffa502" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="420" y="200" width="120" height="38" rx="8" fill="rgba(255,107,107,0.2)" stroke="#ff6b6b" stroke-width="1.5"/>
+                                    <text x="480" y="215" text-anchor="middle" fill="#ff6b6b" font-size="10" font-weight="bold">Adverb</text>
+                                    <text x="480" y="230" text-anchor="middle" fill="#a0a0b8" font-size="8">คำกริยาวิเศษณ์</text>
+                                    <line x1="420" y1="219" x2="320" y2="165" stroke="#ff6b6b" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="230" y="248" width="100" height="38" rx="8" fill="rgba(240,147,251,0.2)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="280" y="263" text-anchor="middle" fill="#f093fb" font-size="10" font-weight="bold">Pronoun</text>
+                                    <text x="280" y="278" text-anchor="middle" fill="#a0a0b8" font-size="8">สรรพนาม (he, she)</text>
+                                    <line x1="280" y1="248" x2="280" y2="190" stroke="#f093fb" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="20" y="200" width="120" height="38" rx="8" fill="rgba(46,213,115,0.2)" stroke="#2ed573" stroke-width="1.5"/>
+                                    <text x="80" y="215" text-anchor="middle" fill="#2ed573" font-size="10" font-weight="bold">Preposition</text>
+                                    <text x="80" y="230" text-anchor="middle" fill="#a0a0b8" font-size="8">บุพบท (in, on, at)</text>
+                                    <line x1="140" y1="219" x2="240" y2="165" stroke="#2ed573" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="5" y="120" width="130" height="38" rx="8" fill="rgba(102,126,234,0.2)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="70" y="135" text-anchor="middle" fill="#667eea" font-size="10" font-weight="bold">Conjunction</text>
+                                    <text x="70" y="150" text-anchor="middle" fill="#a0a0b8" font-size="8">สันธาน (and, but)</text>
+                                    <line x1="135" y1="139" x2="240" y2="150" stroke="#667eea" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="35" y="42" width="120" height="38" rx="8" fill="rgba(255,165,2,0.2)" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="95" y="57" text-anchor="middle" fill="#ffa502" font-size="10" font-weight="bold">Interjection</text>
+                                    <text x="95" y="72" text-anchor="middle" fill="#a0a0b8" font-size="8">อุทาน (Wow! Oh!)</text>
+                                    <line x1="155" y1="61" x2="240" y2="130" stroke="#ffa502" stroke-width="1" stroke-dasharray="4,3"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>&#128270; ตัวอย่าง: วิเคราะห์ประโยค</h3>
+
+                        <div class="visual-box english">
+                            <h4>&#128269; "The clever cat quickly caught a small mouse."</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 560 100" style="max-width: 540px; width: 100%;">
+                                    <!-- Words with color coding -->
+                                    <text x="30" y="35" fill="#f093fb" font-size="14" font-weight="bold">The</text>
+                                    <text x="30" y="55" fill="#f093fb" font-size="9">Article</text>
+
+                                    <text x="80" y="35" fill="#ffa502" font-size="14" font-weight="bold">clever</text>
+                                    <text x="80" y="55" fill="#ffa502" font-size="9">Adj.</text>
+
+                                    <text x="155" y="35" fill="#667eea" font-size="14" font-weight="bold">cat</text>
+                                    <text x="155" y="55" fill="#667eea" font-size="9">Noun</text>
+
+                                    <text x="210" y="35" fill="#ff6b6b" font-size="14" font-weight="bold">quickly</text>
+                                    <text x="210" y="55" fill="#ff6b6b" font-size="9">Adverb</text>
+
+                                    <text x="300" y="35" fill="#2ed573" font-size="14" font-weight="bold">caught</text>
+                                    <text x="300" y="55" fill="#2ed573" font-size="9">Verb</text>
+
+                                    <text x="385" y="35" fill="#f093fb" font-size="14" font-weight="bold">a</text>
+                                    <text x="385" y="55" fill="#f093fb" font-size="9">Article</text>
+
+                                    <text x="415" y="35" fill="#ffa502" font-size="14" font-weight="bold">small</text>
+                                    <text x="415" y="55" fill="#ffa502" font-size="9">Adj.</text>
+
+                                    <text x="485" y="35" fill="#667eea" font-size="14" font-weight="bold">mouse.</text>
+                                    <text x="485" y="55" fill="#667eea" font-size="9">Noun</text>
+
+                                    <!-- Legend -->
+                                    <rect x="30" y="75" width="500" height="20" rx="5" fill="rgba(255,255,255,0.03)"/>
+                                    <circle cx="50" cy="85" r="4" fill="#667eea"/>
+                                    <text x="63" y="89" fill="#a0a0b8" font-size="8">Noun</text>
+                                    <circle cx="110" cy="85" r="4" fill="#2ed573"/>
+                                    <text x="123" y="89" fill="#a0a0b8" font-size="8">Verb</text>
+                                    <circle cx="165" cy="85" r="4" fill="#ffa502"/>
+                                    <text x="178" y="89" fill="#a0a0b8" font-size="8">Adj.</text>
+                                    <circle cx="215" cy="85" r="4" fill="#ff6b6b"/>
+                                    <text x="228" y="89" fill="#a0a0b8" font-size="8">Adv.</text>
+                                    <circle cx="275" cy="85" r="4" fill="#f093fb"/>
+                                    <text x="288" y="89" fill="#a0a0b8" font-size="8">Article</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3: Sentence Structure -->
+                    <div class="content-card" id="ch3">
+                        <h2>บทที่ 3: Sentence Structure - โครงสร้างประโยค</h2>
+
+                        <p>ภาษาอังกฤษมีโครงสร้างประโยคที่เข้มงวดกว่าภาษาไทย โดยทั่วไปจะเรียงแบบ S + V + O (ประธาน + กริยา + กรรม)</p>
+
+                        <div class="visual-box english">
+                            <h4>&#128202; โครงสร้าง S + V + O</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 130" style="max-width: 480px; width: 100%;">
+                                    <rect x="30" y="20" width="120" height="50" rx="10" fill="rgba(102,126,234,0.2)" stroke="#667eea" stroke-width="2"/>
+                                    <text x="90" y="40" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">Subject (S)</text>
+                                    <text x="90" y="58" text-anchor="middle" fill="#a0a0b8" font-size="10">ประธาน</text>
+
+                                    <line x1="155" y1="45" x2="185" y2="45" stroke="#a0a0b8" stroke-width="2"/>
+                                    <polygon points="185,40 195,45 185,50" fill="#a0a0b8"/>
+
+                                    <rect x="200" y="20" width="100" height="50" rx="10" fill="rgba(46,213,115,0.2)" stroke="#2ed573" stroke-width="2"/>
+                                    <text x="250" y="40" text-anchor="middle" fill="#2ed573" font-size="11" font-weight="bold">Verb (V)</text>
+                                    <text x="250" y="58" text-anchor="middle" fill="#a0a0b8" font-size="10">กริยา</text>
+
+                                    <line x1="305" y1="45" x2="335" y2="45" stroke="#a0a0b8" stroke-width="2"/>
+                                    <polygon points="335,40 345,45 335,50" fill="#a0a0b8"/>
+
+                                    <rect x="350" y="20" width="120" height="50" rx="10" fill="rgba(255,165,2,0.2)" stroke="#ffa502" stroke-width="2"/>
+                                    <text x="410" y="40" text-anchor="middle" fill="#ffa502" font-size="11" font-weight="bold">Object (O)</text>
+                                    <text x="410" y="58" text-anchor="middle" fill="#a0a0b8" font-size="10">กรรม</text>
+
+                                    <!-- Example -->
+                                    <text x="90" y="100" text-anchor="middle" fill="#667eea" font-size="13" font-weight="bold">She</text>
+                                    <text x="250" y="100" text-anchor="middle" fill="#2ed573" font-size="13" font-weight="bold">reads</text>
+                                    <text x="410" y="100" text-anchor="middle" fill="#ffa502" font-size="13" font-weight="bold">books.</text>
+                                    <text x="250" y="120" text-anchor="middle" fill="#a0a0b8" font-size="10">เธออ่านหนังสือ</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>ประเภทของประโยค</h3>
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>ประเภท</th>
+                                    <th>ลักษณะ</th>
+                                    <th>ตัวอย่าง</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Affirmative (บอกเล่า)</td>
+                                    <td>S + V + O</td>
+                                    <td>She plays tennis.</td>
+                                </tr>
+                                <tr>
+                                    <td>Negative (ปฏิเสธ)</td>
+                                    <td>S + do/does + not + V</td>
+                                    <td>She does not play tennis.</td>
+                                </tr>
+                                <tr>
+                                    <td>Question (คำถาม)</td>
+                                    <td>Do/Does + S + V?</td>
+                                    <td>Does she play tennis?</td>
+                                </tr>
+                                <tr>
+                                    <td>Wh-Question</td>
+                                    <td>Wh + do/does + S + V?</td>
+                                    <td>What does she play?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="tip-box">
+                            <h4>&#128161; จุดต่างจากภาษาไทย</h4>
+                            <p>ภาษาไทย: "ไม่" วางหน้ากริยาตรงๆ (เธอ<strong>ไม่</strong>เล่นเทนนิส) แต่ภาษาอังกฤษต้องใช้ตัวช่วย do/does/did มาช่วยปฏิเสธ: She <strong>does not</strong> play tennis. ภาษาไทยไม่ต้องสลับคำถาม แต่อังกฤษต้องเอา do/does ขึ้นหน้าประโยค</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz -->
+                    <div class="quiz-section" id="quiz">
+                        <div id="englishQuiz"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>SmartUp &copy; 2026 - ระบบการเรียนรู้ตามหลักสูตรแกนกลาง</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>if (!Auth.isLoggedIn()) { window.location.href = 'auth.html'; }</script>
+    <script>
+        const englishQuestions = [
+            {
+                question: "ประโยค \"She goes to school every day.\" ใช้ Tense อะไร?",
+                options: ["Past Simple", "Present Simple", "Present Continuous", "Present Perfect"],
+                correct: 1,
+                explanation: "ประโยคนี้ใช้ Present Simple เพราะเป็นการบอกนิสัย/สิ่งที่ทำเป็นประจำ (every day) กริยา go เติม -es เป็น goes เพราะประธานเป็น She (he/she/it + V-s/es)"
+            },
+            {
+                question: "\"I _____ to Japan twice.\" เติมช่องว่างด้วยอะไร?",
+                options: ["go", "went", "have been", "am going"],
+                correct: 2,
+                explanation: "ใช้ Present Perfect (have been) เพราะ 'twice' บอกประสบการณ์ที่เคยทำ ผลคือเรามีประสบการณ์นี้จนถึงปัจจุบัน ถ้าใช้ Past Simple (went) จะต้องบอกเวลาที่เจาะจง"
+            },
+            {
+                question: "คำว่า 'quickly' จัดเป็น Part of Speech ประเภทใด?",
+                options: ["Adjective", "Adverb", "Verb", "Noun"],
+                correct: 1,
+                explanation: "quickly เป็น Adverb (คำกริยาวิเศษณ์) ทำหน้าที่ขยายกริยา สังเกตง่ายๆ: คำที่ลงท้ายด้วย -ly มักเป็น Adverb (quick &#8594; quickly, slow &#8594; slowly)"
+            },
+            {
+                question: "ประโยคปฏิเสธของ \"He plays football.\" คือข้อใด?",
+                options: ["He not plays football.", "He doesn't play football.", "He don't play football.", "He isn't play football."],
+                correct: 1,
+                explanation: "ประธาน He ใช้ doesn't (does not) + V1 (กริยาช่องที่ 1 ไม่เติม s) &#8594; He doesn't play football. สังเกต: s ย้ายจาก plays ไปที่ does แทน"
+            },
+            {
+                question: "\"While I _____ dinner, the phone rang.\" เติมอะไร?",
+                options: ["cook", "cooked", "was cooking", "have cooked"],
+                correct: 2,
+                explanation: "ใช้ Past Continuous (was cooking) เพราะเป็นเหตุการณ์ที่ 'กำลังทำอยู่' ในอดีต แล้วมีอีกเหตุการณ์แทรกเข้ามา (rang = Past Simple) โครงสร้าง: While + Past Continuous, Past Simple"
+            },
+            {
+                question: "คำว่า 'beautiful' เป็น Part of Speech ประเภทใด?",
+                options: ["Noun", "Verb", "Adjective", "Adverb"],
+                correct: 2,
+                explanation: "beautiful เป็น Adjective (คำคุณศัพท์) ทำหน้าที่ขยายคำนาม เช่น a beautiful flower ถ้าเติม -ly จะกลายเป็น Adverb: beautifully"
+            },
+            {
+                question: "\"By next year, I _____ English for 3 years.\" เติมอะไร?",
+                options: ["study", "will study", "will have studied", "studied"],
+                correct: 2,
+                explanation: "ใช้ Future Perfect (will have studied) เพราะ 'By next year' + 'for 3 years' บอกว่าจะทำครบ 3 ปีในอนาคต &#8594; เป็นการมองย้อนจากจุดในอนาคตว่าจะทำเสร็จไปแล้ว"
+            }
+        ];
+
+        const quiz = new QuizEngine('englishQuiz', englishQuestions, 'english');
+    </script>
+</body>
+</html>

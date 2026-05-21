@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คณิตศาสตร์ - SmartUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#9733;</span>
+                <span class="logo-text">Smart<span class="highlight">Up</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#subjects">วิชาเรียน</a></li>
+                <li><a href="#" class="active">คณิตศาสตร์</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-page">
+        <!-- Hero -->
+        <div class="lesson-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">หน้าแรก</a> <span>/</span>
+                    <a href="index.html#subjects">วิชาเรียน</a> <span>/</span>
+                    <span>คณิตศาสตร์</span>
+                </div>
+                <h1>&#128202; คณิตศาสตร์พื้นฐาน</h1>
+                <p>เรียนรู้คณิตศาสตร์จากรากฐาน เข้าใจที่มาของสูตร ไม่ใช่แค่ท่องจำ</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="lesson-layout">
+                <!-- Sidebar -->
+                <div class="lesson-sidebar">
+                    <div class="sidebar-card">
+                        <h3>&#128214; สารบัญ</h3>
+                        <ul class="chapter-list">
+                            <li><a href="#ch1" class="active"><span class="chapter-num">1</span>จำนวนจริง</a></li>
+                            <li><a href="#ch2"><span class="chapter-num">2</span>เลขยกกำลัง</a></li>
+                            <li><a href="#ch3"><span class="chapter-num">3</span>พหุนาม</a></li>
+                            <li><a href="#quiz"><span class="chapter-num">&#10003;</span>แบบทดสอบ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="lesson-content">
+
+                    <!-- Chapter 1: จำนวนจริง -->
+                    <div class="content-card" id="ch1">
+                        <h2>บทที่ 1: จำนวนจริง (Real Numbers)</h2>
+
+                        <p>จำนวนจริงคือระบบตัวเลขที่เราใช้ในชีวิตประจำวัน ตั้งแต่การนับของ การวัดระยะทาง ไปจนถึงการคำนวณทางวิทยาศาสตร์ แต่กว่าจะมาเป็นระบบตัวเลขแบบที่เราใช้ทุกวันนี้ มนุษย์ต้องค่อยๆ คิดค้นมาเป็นเวลาหลายพันปี</p>
+
+                        <h3>&#127795; ที่มาของจำนวน: จากการนับสู่จำนวนจริง</h3>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ประวัติศาสตร์ที่น่ารู้</h4>
+                            <p>มนุษย์เริ่มจากการ "นับ" สิ่งของ (1, 2, 3, ...) ซึ่งเรียกว่าจำนวนนับ แต่เมื่ออารยธรรมซับซ้อนขึ้น เราต้องการตัวเลขมากขึ้น เช่น ชาวบาบิโลนคิดค้นเลขศูนย์ ชาวอินเดียพัฒนาระบบเลขฐานสิบ และชาวกรีกค้นพบจำนวนอตรรกยะจากทฤษฎีบทพีทาโกรัส</p>
+                        </div>
+
+                        <div class="visual-box">
+                            <h4>&#128202; แผนภาพ: ครอบครัวของจำนวนจริง</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 600 320" style="max-width: 550px; width: 100%;">
+                                    <!-- Outermost: Real Numbers -->
+                                    <rect x="10" y="10" width="580" height="300" rx="20" fill="none" stroke="#667eea" stroke-width="2.5" stroke-dasharray="8,4"/>
+                                    <text x="300" y="35" text-anchor="middle" fill="#667eea" font-size="14" font-weight="bold">จำนวนจริง (Real Numbers) - R</text>
+
+                                    <!-- Irrational side -->
+                                    <rect x="380" y="50" width="195" height="245" rx="14" fill="rgba(255,165,2,0.1)" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="477" y="75" text-anchor="middle" fill="#ffa502" font-size="12" font-weight="bold">จำนวนอตรรกยะ</text>
+                                    <text x="477" y="120" text-anchor="middle" fill="#a0a0b8" font-size="24">&#8730;2</text>
+                                    <text x="477" y="155" text-anchor="middle" fill="#a0a0b8" font-size="20">&#960;</text>
+                                    <text x="477" y="190" text-anchor="middle" fill="#a0a0b8" font-size="18">e</text>
+                                    <text x="477" y="225" text-anchor="middle" fill="#6b6b80" font-size="11">เขียนเป็นทศนิยม</text>
+                                    <text x="477" y="242" text-anchor="middle" fill="#6b6b80" font-size="11">ไม่รู้จบไม่ซ้ำ</text>
+
+                                    <!-- Rational Numbers -->
+                                    <rect x="25" y="50" width="340" height="245" rx="14" fill="rgba(102,126,234,0.08)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="195" y="75" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold">จำนวนตรรกยะ (Q) - เขียนเป็นเศษส่วนได้</text>
+
+                                    <!-- Integers -->
+                                    <rect x="40" y="90" width="310" height="190" rx="12" fill="rgba(46,213,115,0.08)" stroke="#2ed573" stroke-width="1.5"/>
+                                    <text x="195" y="112" text-anchor="middle" fill="#2ed573" font-size="11" font-weight="bold">จำนวนเต็ม (Z) - ..., -2, -1, 0, 1, 2, ...</text>
+
+                                    <!-- Whole Numbers -->
+                                    <rect x="55" y="125" width="280" height="140" rx="10" fill="rgba(240,147,251,0.08)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="195" y="147" text-anchor="middle" fill="#f093fb" font-size="11" font-weight="bold">จำนวนเต็มไม่ลบ (W) - 0, 1, 2, 3, ...</text>
+
+                                    <!-- Natural Numbers -->
+                                    <rect x="70" y="160" width="250" height="90" rx="8" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="1.5"/>
+                                    <text x="195" y="182" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">จำนวนนับ (N) - 1, 2, 3, ...</text>
+                                    <text x="195" y="215" text-anchor="middle" fill="#a0a0b8" font-size="28">1  2  3  4  5</text>
+                                </svg>
+                            </div>
+                            <p class="caption">จำนวนจริงแบ่งเป็น 2 กลุ่มใหญ่: จำนวนตรรกยะ (เขียนเป็นเศษส่วนได้) และจำนวนอตรรกยะ (เขียนเป็นเศษส่วนไม่ได้)</p>
+                        </div>
+
+                        <h3>&#128270; เจาะลึก: แต่ละประเภทจำนวน</h3>
+
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>ประเภท</th>
+                                    <th>สัญลักษณ์</th>
+                                    <th>ตัวอย่าง</th>
+                                    <th>ลักษณะ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>จำนวนนับ</td>
+                                    <td>N</td>
+                                    <td>1, 2, 3, 4, ...</td>
+                                    <td>ใช้นับสิ่งของ</td>
+                                </tr>
+                                <tr>
+                                    <td>จำนวนเต็ม</td>
+                                    <td>Z</td>
+                                    <td>..., -2, -1, 0, 1, 2, ...</td>
+                                    <td>รวมจำนวนลบและศูนย์</td>
+                                </tr>
+                                <tr>
+                                    <td>จำนวนตรรกยะ</td>
+                                    <td>Q</td>
+                                    <td>1/2, -3/4, 0.5, 0.333...</td>
+                                    <td>เขียนเป็น a/b ได้ (b&#8800;0)</td>
+                                </tr>
+                                <tr>
+                                    <td>จำนวนอตรรกยะ</td>
+                                    <td>-</td>
+                                    <td>&#8730;2, &#960;, e</td>
+                                    <td>ทศนิยมไม่รู้จบไม่ซ้ำ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="example-box">
+                            <h4>&#128161; ตัวอย่าง: ทำไม &#8730;2 ถึงเป็นจำนวนอตรรกยะ?</h4>
+                            <div class="step">
+                                <span class="step-num">1</span>
+                                <span>สมมติว่า &#8730;2 = a/b (เป็นเศษส่วนอย่างต่ำ)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">2</span>
+                                <span>ยกกำลังสองทั้งสองข้าง: 2 = a&#178;/b&#178; &#8594; a&#178; = 2b&#178;</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">3</span>
+                                <span>ดังนั้น a&#178; เป็นจำนวนคู่ &#8594; a ก็ต้องเป็นจำนวนคู่ &#8594; ให้ a = 2k</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">4</span>
+                                <span>แทนค่า: (2k)&#178; = 2b&#178; &#8594; 4k&#178; = 2b&#178; &#8594; b&#178; = 2k&#178;</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">5</span>
+                                <span>b&#178; เป็นจำนวนคู่ &#8594; b ก็เป็นจำนวนคู่ แต่ถ้าทั้ง a และ b เป็นจำนวนคู่ ก็ขัดแย้งกับที่บอกว่า a/b เป็นเศษส่วนอย่างต่ำ!</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#10003;</span>
+                                <span><strong>สรุป:</strong> &#8730;2 ไม่สามารถเขียนเป็นเศษส่วนได้ จึงเป็นจำนวนอตรรกยะ (พิสูจน์โดยวิธีสรุปเท็จ - Proof by contradiction)</span>
+                            </div>
+                        </div>
+
+                        <div class="visual-box">
+                            <h4>&#128207; เส้นจำนวน (Number Line)</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 600 100" style="max-width: 550px; width: 100%;">
+                                    <!-- Main line -->
+                                    <line x1="30" y1="50" x2="570" y2="50" stroke="#667eea" stroke-width="2"/>
+                                    <polygon points="570,45 580,50 570,55" fill="#667eea"/>
+                                    <polygon points="30,45 20,50 30,55" fill="#667eea"/>
+
+                                    <!-- Tick marks and labels -->
+                                    <line x1="100" y1="42" x2="100" y2="58" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="100" y="75" text-anchor="middle" fill="#a0a0b8" font-size="13">-3</text>
+
+                                    <line x1="170" y1="42" x2="170" y2="58" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="170" y="75" text-anchor="middle" fill="#a0a0b8" font-size="13">-2</text>
+
+                                    <line x1="240" y1="42" x2="240" y2="58" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="240" y="75" text-anchor="middle" fill="#a0a0b8" font-size="13">-1</text>
+
+                                    <line x1="310" y1="38" x2="310" y2="62" stroke="white" stroke-width="2"/>
+                                    <text x="310" y="78" text-anchor="middle" fill="white" font-size="14" font-weight="bold">0</text>
+
+                                    <line x1="380" y1="42" x2="380" y2="58" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="380" y="75" text-anchor="middle" fill="#a0a0b8" font-size="13">1</text>
+
+                                    <line x1="450" y1="42" x2="450" y2="58" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="450" y="75" text-anchor="middle" fill="#a0a0b8" font-size="13">2</text>
+
+                                    <line x1="520" y1="42" x2="520" y2="58" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <text x="520" y="75" text-anchor="middle" fill="#a0a0b8" font-size="13">3</text>
+
+                                    <!-- Special points -->
+                                    <circle cx="409" cy="50" r="5" fill="#ffa502"/>
+                                    <text x="409" y="28" text-anchor="middle" fill="#ffa502" font-size="11">&#8730;2&#8776;1.41</text>
+
+                                    <circle cx="530" cy="50" r="5" fill="#f093fb"/>
+                                    <text x="530" y="28" text-anchor="middle" fill="#f093fb" font-size="11">&#960;&#8776;3.14</text>
+
+                                    <!-- Negative region -->
+                                    <text x="60" y="25" fill="#ff6b6b" font-size="10">จำนวนลบ</text>
+                                    <text x="490" y="25" fill="#2ed573" font-size="10">จำนวนบวก</text>
+                                </svg>
+                            </div>
+                            <p class="caption">เส้นจำนวนแสดงตำแหน่งของจำนวนจริงทุกชนิด รวมถึงจำนวนอตรรกยะอย่าง &#8730;2 และ &#960;</p>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>&#128161; เคล็ดลับจำง่าย</h4>
+                            <p>N &#8838; W &#8838; Z &#8838; Q &#8838; R (จำนวนนับอยู่ในจำนวนเต็มไม่ลบ อยู่ในจำนวนเต็ม อยู่ในจำนวนตรรกยะ อยู่ในจำนวนจริง) - เหมือนกล่องซ้อนกล่อง!</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2: เลขยกกำลัง -->
+                    <div class="content-card" id="ch2">
+                        <h2>บทที่ 2: เลขยกกำลัง (Exponents)</h2>
+
+                        <p>เลขยกกำลังคือวิธีเขียนการคูณจำนวนเดียวกันซ้ำๆ ให้สั้นลง แทนที่จะเขียน 2 &#215; 2 &#215; 2 เราเขียนเป็น 2&#179; อ่านว่า "สองยกกำลังสาม"</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ที่มาของเลขยกกำลัง</h4>
+                            <p>แนวคิดเลขยกกำลังมีมาตั้งแต่สมัยอียิปต์โบราณ แต่สัญลักษณ์ที่เราใช้ทุกวันนี้ (a&#8319;) ถูกกำหนดโดย เรเน เดการ์ต (Ren&eacute; Descartes) นักคณิตศาสตร์ชาวฝรั่งเศส ในปี ค.ศ. 1637 ในหนังสือ "La G&eacute;om&eacute;trie" เพื่อทำให้การเขียนสมการกระชับขึ้น</p>
+                        </div>
+
+                        <div class="visual-box">
+                            <h4>&#128202; ทำความเข้าใจเลขยกกำลัง</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 200" style="max-width: 480px; width: 100%;">
+                                    <!-- Base concept -->
+                                    <text x="250" y="40" text-anchor="middle" fill="white" font-size="32" font-weight="bold">2&#179; = 8</text>
+
+                                    <text x="145" y="90" text-anchor="middle" fill="#667eea" font-size="13">&#8593; ฐาน (base)</text>
+                                    <text x="290" y="90" text-anchor="middle" fill="#ffa502" font-size="13">&#8593; เลขชี้กำลัง</text>
+
+                                    <!-- Expansion -->
+                                    <text x="250" y="130" text-anchor="middle" fill="#a0a0b8" font-size="16">= 2 &#215; 2 &#215; 2</text>
+                                    <text x="250" y="155" text-anchor="middle" fill="#2ed573" font-size="14">คูณเลข 2 จำนวน 3 ครั้ง</text>
+
+                                    <!-- Visual boxes -->
+                                    <rect x="120" y="170" width="30" height="20" rx="3" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="135" y="184" text-anchor="middle" fill="white" font-size="11">2</text>
+
+                                    <text x="160" y="184" text-anchor="middle" fill="#a0a0b8" font-size="14">&#215;</text>
+
+                                    <rect x="175" y="170" width="30" height="20" rx="3" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="190" y="184" text-anchor="middle" fill="white" font-size="11">2</text>
+
+                                    <text x="215" y="184" text-anchor="middle" fill="#a0a0b8" font-size="14">&#215;</text>
+
+                                    <rect x="230" y="170" width="30" height="20" rx="3" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="245" y="184" text-anchor="middle" fill="white" font-size="11">2</text>
+
+                                    <text x="275" y="184" text-anchor="middle" fill="white" font-size="14">=</text>
+
+                                    <rect x="290" y="170" width="40" height="20" rx="3" fill="rgba(46,213,115,0.3)" stroke="#2ed573" stroke-width="1"/>
+                                    <text x="310" y="184" text-anchor="middle" fill="#2ed573" font-size="12" font-weight="bold">8</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>&#128220; กฎของเลขยกกำลัง</h3>
+
+                        <div class="formula-box">
+                            <span class="formula-label">กฎข้อที่ 1: การคูณฐานเดียวกัน</span>
+                            a<sup>m</sup> &#215; a<sup>n</sup> = a<sup>m+n</sup>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>&#128161; ทำไมถึงเป็นแบบนี้?</h4>
+                            <div class="step">
+                                <span class="step-num">1</span>
+                                <span>2&#179; &#215; 2&#178; = (2&#215;2&#215;2) &#215; (2&#215;2)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">2</span>
+                                <span>= 2&#215;2&#215;2&#215;2&#215;2 = 2&#8309;</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#10003;</span>
+                                <span>เห็นไหม? แค่นับจำนวนครั้งที่คูณ 2 รวมกัน: 3+2 = 5 ครั้ง!</span>
+                            </div>
+                        </div>
+
+                        <div class="formula-box">
+                            <span class="formula-label">กฎข้อที่ 2: การหารฐานเดียวกัน</span>
+                            a<sup>m</sup> &#247; a<sup>n</sup> = a<sup>m-n</sup>
+                        </div>
+
+                        <div class="formula-box">
+                            <span class="formula-label">กฎข้อที่ 3: กำลังของกำลัง</span>
+                            (a<sup>m</sup>)<sup>n</sup> = a<sup>m&#215;n</sup>
+                        </div>
+
+                        <div class="formula-box">
+                            <span class="formula-label">กฎข้อที่ 4: กำลังศูนย์</span>
+                            a<sup>0</sup> = 1 (เมื่อ a &#8800; 0)
+                        </div>
+
+                        <div class="origin-box">
+                            <h4>&#129300; ทำไม a&#8304; = 1 ?</h4>
+                            <p>ลองคิดแบบนี้: a&#179; &#247; a&#179; = a&#179;&#8315;&#179; = a&#8304; แต่จำนวนใดๆ หารตัวเองย่อมได้ 1 ดังนั้น a&#8304; = 1 นั่นเอง! ไม่ใช่กฎที่ตั้งขึ้นมาลอยๆ แต่เป็นผลจากกฎการหารนั่นแหละ</p>
+                        </div>
+
+                        <div class="formula-box">
+                            <span class="formula-label">กฎข้อที่ 5: กำลังลบ</span>
+                            a<sup>-n</sup> = 1/a<sup>n</sup>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3: พหุนาม -->
+                    <div class="content-card" id="ch3">
+                        <h2>บทที่ 3: พหุนาม (Polynomials)</h2>
+
+                        <p>พหุนามคือนิพจน์ทางคณิตศาสตร์ที่ประกอบด้วยตัวแปร ค่าคงตัว และเลขชี้กำลังที่เป็นจำนวนเต็มไม่ลบ เช่น 3x&#178; + 2x - 5</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ที่มาของคำว่า "พหุนาม"</h4>
+                            <p>คำว่า "Polynomial" มาจากภาษากรีก "poly" แปลว่า "หลาย" และ "nomos" แปลว่า "ส่วน" รวมกันหมายถึง "มีหลายส่วน" (หลายพจน์) ส่วนในภาษาไทย "พหุ" แปลว่า "มาก" และ "นาม" แปลว่า "ชื่อ/พจน์" ตรงกันพอดี</p>
+                        </div>
+
+                        <div class="visual-box">
+                            <h4>&#128202; ส่วนประกอบของพหุนาม</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 180" style="max-width: 480px; width: 100%;">
+                                    <text x="250" y="40" text-anchor="middle" fill="white" font-size="28" font-weight="bold">3x&#178; + 2x - 5</text>
+
+                                    <!-- Arrows and labels -->
+                                    <line x1="140" y1="50" x2="140" y2="80" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="140" y="95" text-anchor="middle" fill="#667eea" font-size="11">สัมประสิทธิ์</text>
+                                    <text x="140" y="110" text-anchor="middle" fill="#667eea" font-size="11">= 3</text>
+
+                                    <line x1="185" y1="50" x2="185" y2="80" stroke="#2ed573" stroke-width="1.5"/>
+                                    <text x="185" y="95" text-anchor="middle" fill="#2ed573" font-size="11">ตัวแปร</text>
+                                    <text x="185" y="110" text-anchor="middle" fill="#2ed573" font-size="11">= x</text>
+
+                                    <line x1="215" y1="20" x2="215" y2="10" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="240" y="10" text-anchor="middle" fill="#ffa502" font-size="11">เลขชี้กำลัง = 2</text>
+
+                                    <line x1="355" y1="50" x2="355" y2="80" stroke="#ff6b6b" stroke-width="1.5"/>
+                                    <text x="355" y="95" text-anchor="middle" fill="#ff6b6b" font-size="11">ค่าคงตัว</text>
+                                    <text x="355" y="110" text-anchor="middle" fill="#ff6b6b" font-size="11">= -5</text>
+
+                                    <!-- Degree info -->
+                                    <rect x="120" y="130" width="260" height="35" rx="8" fill="rgba(102,126,234,0.1)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="250" y="152" text-anchor="middle" fill="#667eea" font-size="12">ดีกรี (degree) = 2 &#8594; เรียกว่า "พหุนามดีกรีสอง"</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>&#128221; ประเภทของพหุนาม</h3>
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>ชื่อ</th>
+                                    <th>จำนวนพจน์</th>
+                                    <th>ตัวอย่าง</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>เอกนาม (Monomial)</td><td>1 พจน์</td><td>5x&#178;</td></tr>
+                                <tr><td>ทวินาม (Binomial)</td><td>2 พจน์</td><td>3x + 7</td></tr>
+                                <tr><td>ตรีนาม (Trinomial)</td><td>3 พจน์</td><td>x&#178; + 2x - 1</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h3>&#9997; การบวก/ลบพหุนาม</h3>
+                        <div class="example-box">
+                            <h4>&#128161; ตัวอย่าง: (3x&#178; + 2x - 5) + (x&#178; - 4x + 3)</h4>
+                            <div class="step">
+                                <span class="step-num">1</span>
+                                <span>จัดกลุ่มพจน์ที่คล้ายกัน (Like terms): (3x&#178; + x&#178;) + (2x + (-4x)) + (-5 + 3)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">2</span>
+                                <span>บวกสัมประสิทธิ์ของพจน์ที่คล้ายกัน: 4x&#178; + (-2x) + (-2)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#10003;</span>
+                                <span><strong>คำตอบ: 4x&#178; - 2x - 2</strong></span>
+                            </div>
+                        </div>
+
+                        <h3>สูตรลัดที่สำคัญ</h3>
+                        <div class="formula-box">
+                            <span class="formula-label">กำลังสองของผลบวก</span>
+                            (a + b)&#178; = a&#178; + 2ab + b&#178;
+                        </div>
+                        <div class="formula-box">
+                            <span class="formula-label">กำลังสองของผลต่าง</span>
+                            (a - b)&#178; = a&#178; - 2ab + b&#178;
+                        </div>
+                        <div class="formula-box">
+                            <span class="formula-label">ผลต่างกำลังสอง</span>
+                            a&#178; - b&#178; = (a + b)(a - b)
+                        </div>
+
+                        <div class="origin-box">
+                            <h4>&#129300; ทำไม (a+b)&#178; = a&#178; + 2ab + b&#178;?</h4>
+                            <p>ลองนึกภาพสี่เหลี่ยมจัตุรัสที่มีด้านยาว (a+b) พื้นที่ทั้งหมดคือ (a+b)&#178; แต่ถ้าแบ่งเป็น 4 ส่วน จะได้: สี่เหลี่ยมจัตุรัส a&#178; + สี่เหลี่ยมจัตุรัส b&#178; + สี่เหลี่ยมผืนผ้า ab สองรูป = a&#178; + 2ab + b&#178; นี่คือเหตุผลทางเรขาคณิตที่สูตรนี้เป็นจริง!</p>
+                        </div>
+
+                        <div class="visual-box">
+                            <h4>&#128202; พิสูจน์ด้วยรูปภาพ: (a+b)&#178;</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 400 280" style="max-width: 380px; width: 100%;">
+                                    <!-- Main square -->
+                                    <rect x="50" y="30" width="200" height="200" rx="0" fill="none" stroke="white" stroke-width="2"/>
+
+                                    <!-- a&#178; -->
+                                    <rect x="50" y="30" width="130" height="130" fill="rgba(102,126,234,0.25)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="115" y="100" text-anchor="middle" fill="#667eea" font-size="18" font-weight="bold">a&#178;</text>
+
+                                    <!-- b&#178; -->
+                                    <rect x="180" y="160" width="70" height="70" fill="rgba(255,107,107,0.25)" stroke="#ff6b6b" stroke-width="1.5"/>
+                                    <text x="215" y="200" text-anchor="middle" fill="#ff6b6b" font-size="14" font-weight="bold">b&#178;</text>
+
+                                    <!-- ab rectangles -->
+                                    <rect x="180" y="30" width="70" height="130" fill="rgba(46,213,115,0.2)" stroke="#2ed573" stroke-width="1.5"/>
+                                    <text x="215" y="100" text-anchor="middle" fill="#2ed573" font-size="13">ab</text>
+
+                                    <rect x="50" y="160" width="130" height="70" fill="rgba(255,165,2,0.2)" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="115" y="200" text-anchor="middle" fill="#ffa502" font-size="13">ab</text>
+
+                                    <!-- Labels -->
+                                    <text x="115" y="20" text-anchor="middle" fill="#667eea" font-size="13">a</text>
+                                    <text x="215" y="20" text-anchor="middle" fill="#ff6b6b" font-size="13">b</text>
+                                    <text x="40" y="100" text-anchor="middle" fill="#667eea" font-size="13">a</text>
+                                    <text x="40" y="200" text-anchor="middle" fill="#ff6b6b" font-size="13">b</text>
+
+                                    <!-- Top label -->
+                                    <line x1="50" y1="5" x2="250" y2="5" stroke="white" stroke-width="1"/>
+                                    <text x="150" y="-2" text-anchor="middle" fill="white" font-size="12">a + b</text>
+
+                                    <!-- Result -->
+                                    <text x="200" y="260" text-anchor="middle" fill="white" font-size="14">(a+b)&#178; = a&#178; + 2ab + b&#178;</text>
+                                </svg>
+                            </div>
+                            <p class="caption">พื้นที่สี่เหลี่ยมด้าน (a+b) = a&#178; + ab + ab + b&#178; = a&#178; + 2ab + b&#178;</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz -->
+                    <div class="quiz-section" id="quiz">
+                        <div id="mathQuiz"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>SmartUp &copy; 2026 - ระบบการเรียนรู้ตามหลักสูตรแกนกลาง</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>if (!Auth.isLoggedIn()) { window.location.href = 'auth.html'; }</script>
+    <script>
+        const mathQuestions = [
+            {
+                question: "จำนวนใดต่อไปนี้เป็นจำนวนอตรรกยะ?",
+                options: ["1/3", "0.75", "&#8730;5", "-7"],
+                correct: 2,
+                explanation: "&#8730;5 เป็นจำนวนอตรรกยะ เพราะเขียนเป็นเศษส่วนไม่ได้ และเป็นทศนิยมไม่รู้จบไม่ซ้ำ (&#8776; 2.2360679...) ส่วน 1/3, 0.75 (=3/4), -7 ล้วนเป็นจำนวนตรรกยะ"
+            },
+            {
+                question: "2&#8308; &#215; 2&#179; มีค่าเท่ากับข้อใด?",
+                options: ["2&#8311;", "2&#185;&#178;", "4&#8311;", "2&#8304;"],
+                correct: 0,
+                explanation: "ใช้กฎ a&#7504; &#215; a&#8319; = a&#7504;&#8314;&#8319; ดังนั้น 2&#8308; &#215; 2&#179; = 2&#8308;&#8314;&#179; = 2&#8311; = 128"
+            },
+            {
+                question: "5&#8304; มีค่าเท่ากับเท่าใด?",
+                options: ["0", "5", "1", "ไม่มีค่า"],
+                correct: 2,
+                explanation: "จำนวนใดๆ ที่ไม่ใช่ศูนย์ ยกกำลังศูนย์ จะมีค่าเท่ากับ 1 เสมอ เพราะ a&#8319; &#247; a&#8319; = a&#8319;&#8315;&#8319; = a&#8304; = 1"
+            },
+            {
+                question: "(x + 3)&#178; เท่ากับข้อใด?",
+                options: ["x&#178; + 9", "x&#178; + 3x + 9", "x&#178; + 6x + 9", "2x + 6"],
+                correct: 2,
+                explanation: "ใช้สูตร (a+b)&#178; = a&#178; + 2ab + b&#178; โดย a=x, b=3 จะได้ x&#178; + 2(x)(3) + 3&#178; = x&#178; + 6x + 9"
+            },
+            {
+                question: "พหุนาม 4x&#179; - 2x + 7 มีดีกรีเท่าใด?",
+                options: ["1", "2", "3", "4"],
+                correct: 2,
+                explanation: "ดีกรีของพหุนามคือเลขชี้กำลังสูงสุดของตัวแปร ในที่นี้พจน์ 4x&#179; มีเลขชี้กำลังสูงสุดคือ 3 ดังนั้นดีกรี = 3"
+            },
+            {
+                question: "จำนวนใดต่อไปนี้ไม่ใช่จำนวนตรรกยะ?",
+                options: ["0.333...", "&#8730;9", "&#960;", "-2/5"],
+                correct: 2,
+                explanation: "&#960; (pi) &#8776; 3.14159... เป็นทศนิยมไม่รู้จบไม่ซ้ำ จึงเป็นจำนวนอตรรกยะ ส่วน 0.333... = 1/3, &#8730;9 = 3, -2/5 ล้วนเป็นจำนวนตรรกยะ"
+            },
+            {
+                question: "a&#178; - b&#178; แยกตัวประกอบได้เป็น?",
+                options: ["(a-b)&#178;", "(a+b)&#178;", "(a+b)(a-b)", "(a-b)(a-b)"],
+                correct: 2,
+                explanation: "สูตรผลต่างกำลังสอง: a&#178; - b&#178; = (a+b)(a-b) ตรวจสอบ: (a+b)(a-b) = a&#178; - ab + ab - b&#178; = a&#178; - b&#178; &#10003;"
+            }
+        ];
+
+        const quiz = new QuizEngine('mathQuiz', mathQuestions, 'math');
+    </script>
+</body>
+</html>

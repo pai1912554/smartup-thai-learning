@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาศาสตร์ - SmartUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#9733;</span>
+                <span class="logo-text">Smart<span class="highlight">Up</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#subjects">วิชาเรียน</a></li>
+                <li><a href="#" class="active">วิทยาศาสตร์</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-page">
+        <div class="lesson-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">หน้าแรก</a> <span>/</span>
+                    <a href="index.html#subjects">วิชาเรียน</a> <span>/</span>
+                    <span>วิทยาศาสตร์</span>
+                </div>
+                <h1>&#128300; วิทยาศาสตร์</h1>
+                <p>เข้าใจธรรมชาติรอบตัว ตั้งแต่อะตอมเล็กจิ๋วไปจนถึงแรงที่ขับเคลื่อนจักรวาล</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="lesson-layout">
+                <div class="lesson-sidebar">
+                    <div class="sidebar-card">
+                        <h3>&#128214; สารบัญ</h3>
+                        <ul class="chapter-list">
+                            <li><a href="#ch1" class="active"><span class="chapter-num">1</span>แรงและการเคลื่อนที่</a></li>
+                            <li><a href="#ch2"><span class="chapter-num">2</span>โครงสร้างอะตอม</a></li>
+                            <li><a href="#ch3"><span class="chapter-num">3</span>พลังงาน</a></li>
+                            <li><a href="#quiz"><span class="chapter-num">&#10003;</span>แบบทดสอบ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lesson-content">
+
+                    <!-- Chapter 1: แรงและการเคลื่อนที่ -->
+                    <div class="content-card" id="ch1">
+                        <h2>บทที่ 1: แรงและการเคลื่อนที่ (Force & Motion)</h2>
+
+                        <p>แรง (Force) คือสิ่งที่ทำให้วัตถุเปลี่ยนสภาพการเคลื่อนที่ ไม่ว่าจะเริ่มเคลื่อนที่ หยุดนิ่ง เร่งความเร็ว หรือเปลี่ยนทิศทาง ทุกอย่างที่เราเห็นเคลื่อนไหวล้วนมีแรงเป็นต้นเหตุ</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ที่มา: เซอร์ ไอแซก นิวตัน</h4>
+                            <p>ในปี ค.ศ. 1687 เซอร์ไอแซก นิวตัน ตีพิมพ์หนังสือ "Principia Mathematica" ซึ่งอธิบายกฎการเคลื่อนที่ 3 ข้อ ที่ปฏิวัติความเข้าใจของมนุษย์เกี่ยวกับจักรวาล ตำนานเล่าว่า แรงบันดาลใจมาจากการเห็นแอปเปิลตกจากต้น ทำให้เขาตั้งคำถามว่า "ทำไมของถึงตก?"</p>
+                        </div>
+
+                        <h3>&#128220; กฎการเคลื่อนที่ของนิวตัน</h3>
+
+                        <div class="visual-box science">
+                            <h4>กฎข้อที่ 1: กฎความเฉื่อย (Law of Inertia)</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 160" style="max-width: 480px; width: 100%;">
+                                    <!-- Static object -->
+                                    <rect x="60" y="80" width="60" height="40" rx="5" fill="rgba(46,213,115,0.3)" stroke="#2ed573" stroke-width="2"/>
+                                    <text x="90" y="105" text-anchor="middle" fill="#2ed573" font-size="12">หยุดนิ่ง</text>
+                                    <text x="90" y="140" text-anchor="middle" fill="#a0a0b8" font-size="10">ไม่มีแรงกระทำ</text>
+                                    <text x="90" y="155" text-anchor="middle" fill="#a0a0b8" font-size="10">&#8594; หยุดนิ่งต่อไป</text>
+
+                                    <!-- Moving object -->
+                                    <rect x="250" y="80" width="60" height="40" rx="5" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="2"/>
+                                    <text x="280" y="105" text-anchor="middle" fill="#667eea" font-size="12">เคลื่อนที่</text>
+                                    <!-- Arrow -->
+                                    <line x1="320" y1="100" x2="380" y2="100" stroke="#667eea" stroke-width="2"/>
+                                    <polygon points="380,95 395,100 380,105" fill="#667eea"/>
+                                    <text x="357" y="85" text-anchor="middle" fill="#667eea" font-size="10">v คงที่</text>
+                                    <text x="320" y="140" text-anchor="middle" fill="#a0a0b8" font-size="10">ไม่มีแรงลัพธ์</text>
+                                    <text x="320" y="155" text-anchor="middle" fill="#a0a0b8" font-size="10">&#8594; เคลื่อนที่สม่ำเสมอ</text>
+
+                                    <!-- Title -->
+                                    <text x="250" y="30" text-anchor="middle" fill="white" font-size="13" font-weight="bold">"วัตถุจะคงสภาพเดิม จนกว่าจะมีแรงมากระทำ"</text>
+                                </svg>
+                            </div>
+                            <p class="caption">ถ้าไม่มีแรงมากระทำ ของที่หยุดนิ่งก็จะหยุดนิ่งต่อไป ของที่เคลื่อนที่ก็จะเคลื่อนที่ต่อไปด้วยความเร็วคงที่</p>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>&#128161; ตัวอย่างในชีวิตจริง</h4>
+                            <p>ลองนึกถึงตอนนั่งรถเมล์แล้วรถเบรกกะทันหัน ตัวเราจะพุ่งไปข้างหน้า เพราะร่างกายของเรายังคง "เฉื่อย" อยากเคลื่อนที่ต่อไปข้างหน้า ทั้งๆ ที่รถหยุดแล้ว นี่คือกฎความเฉื่อยของนิวตัน!</p>
+                        </div>
+
+                        <div class="visual-box science">
+                            <h4>กฎข้อที่ 2: F = ma</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 200" style="max-width: 480px; width: 100%;">
+                                    <!-- Formula -->
+                                    <text x="250" y="40" text-anchor="middle" fill="white" font-size="36" font-weight="bold">F = ma</text>
+
+                                    <!-- Labels -->
+                                    <text x="155" y="80" text-anchor="middle" fill="#2ed573" font-size="14">แรง (N)</text>
+                                    <text x="280" y="80" text-anchor="middle" fill="#667eea" font-size="14">มวล (kg)</text>
+                                    <text x="355" y="80" text-anchor="middle" fill="#ffa502" font-size="14">ความเร่ง (m/s&#178;)</text>
+
+                                    <!-- Visual comparison -->
+                                    <!-- Light object -->
+                                    <rect x="60" y="110" width="30" height="30" rx="5" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="75" y="130" text-anchor="middle" fill="white" font-size="10">1kg</text>
+                                    <line x1="100" y1="125" x2="180" y2="125" stroke="#ffa502" stroke-width="2.5"/>
+                                    <polygon points="180,120 195,125 180,130" fill="#ffa502"/>
+                                    <text x="145" y="115" text-anchor="middle" fill="#ffa502" font-size="11">a = 10 m/s&#178;</text>
+
+                                    <!-- Heavy object -->
+                                    <rect x="50" y="155" width="50" height="40" rx="5" fill="rgba(102,126,234,0.5)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="75" y="180" text-anchor="middle" fill="white" font-size="10">5kg</text>
+                                    <line x1="110" y1="175" x2="145" y2="175" stroke="#ffa502" stroke-width="2.5"/>
+                                    <polygon points="145,170 158,175 145,180" fill="#ffa502"/>
+                                    <text x="140" y="165" text-anchor="middle" fill="#ffa502" font-size="11">a = 2 m/s&#178;</text>
+
+                                    <!-- Same force label -->
+                                    <text x="350" y="145" text-anchor="middle" fill="#2ed573" font-size="12">แรงเท่ากัน = 10N</text>
+                                    <text x="350" y="165" text-anchor="middle" fill="#a0a0b8" font-size="11">มวลมาก &#8594; เร่งน้อย</text>
+                                    <text x="350" y="185" text-anchor="middle" fill="#a0a0b8" font-size="11">มวลน้อย &#8594; เร่งมาก</text>
+                                </svg>
+                            </div>
+                            <p class="caption">แรง = มวล &#215; ความเร่ง : ถ้าออกแรงเท่ากัน ของหนักจะเร่งได้ช้ากว่าของเบา</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>&#128161; ตัวอย่าง: คำนวณแรง</h4>
+                            <div class="step">
+                                <span class="step-num">&#10067;</span>
+                                <span>รถมวล 1,000 kg เร่งความเร็วจาก 0 เป็น 20 m/s ใน 10 วินาที ต้องใช้แรงเท่าไร?</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">1</span>
+                                <span>หาความเร่ง: a = &#916;v / &#916;t = (20-0) / 10 = 2 m/s&#178;</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">2</span>
+                                <span>คำนวณแรง: F = ma = 1,000 &#215; 2 = 2,000 N</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">&#10003;</span>
+                                <span><strong>คำตอบ: ต้องใช้แรง 2,000 นิวตัน (หรือ 2 kN)</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="visual-box science">
+                            <h4>กฎข้อที่ 3: แรงกิริยา = แรงปฏิกิริยา</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 150" style="max-width: 480px; width: 100%;">
+                                    <text x="250" y="25" text-anchor="middle" fill="white" font-size="13" font-weight="bold">"ทุกแรงกระทำ มีแรงตอบโต้ขนาดเท่ากัน ทิศตรงข้าม"</text>
+
+                                    <!-- Hand pushing wall -->
+                                    <text x="140" y="70" text-anchor="middle" fill="#a0a0b8" font-size="24">&#9995;</text>
+                                    <line x1="165" y1="70" x2="210" y2="70" stroke="#2ed573" stroke-width="3"/>
+                                    <polygon points="210,64 225,70 210,76" fill="#2ed573"/>
+                                    <text x="195" y="55" text-anchor="middle" fill="#2ed573" font-size="10">แรงกิริยา</text>
+
+                                    <rect x="230" y="45" width="15" height="60" rx="2" fill="rgba(160,160,184,0.3)" stroke="#a0a0b8" stroke-width="2"/>
+
+                                    <line x1="240" y1="70" x2="195" y2="70" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="5,3"/>
+                                    <text x="270" y="55" text-anchor="middle" fill="#ff6b6b" font-size="10">แรงปฏิกิริยา</text>
+
+                                    <!-- Rocket example -->
+                                    <text x="400" y="55" text-anchor="middle" fill="#a0a0b8" font-size="28">&#128640;</text>
+                                    <line x1="400" y1="75" x2="400" y2="105" stroke="#ffa502" stroke-width="3"/>
+                                    <polygon points="394,105 400,118 406,105" fill="#ffa502"/>
+                                    <text x="400" y="135" text-anchor="middle" fill="#ffa502" font-size="10">ก๊าซพุ่งลง</text>
+                                    <line x1="400" y1="45" x2="400" y2="20" stroke="#2ed573" stroke-width="3"/>
+                                    <polygon points="394,20 400,8 406,20" fill="#2ed573"/>
+                                    <text x="400" y="5" text-anchor="middle" fill="#2ed573" font-size="10">จรวดพุ่งขึ้น</text>
+                                </svg>
+                            </div>
+                            <p class="caption">ผลักกำแพง &#8594; กำแพงดันกลับ | จรวดยิงก๊าซลง &#8594; จรวดพุ่งขึ้น</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2: โครงสร้างอะตอม -->
+                    <div class="content-card" id="ch2">
+                        <h2>บทที่ 2: โครงสร้างอะตอม (Atomic Structure)</h2>
+
+                        <p>อะตอม (Atom) คือหน่วยย่อยที่สุดของธาตุ ที่ยังคงสมบัติทางเคมีของธาตุนั้นไว้ ทุกสิ่งที่เราเห็นรอบตัว ตั้งแต่อากาศ น้ำ ไปจนถึงตัวเรา ล้วนประกอบด้วยอะตอมทั้งสิ้น</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ประวัติศาสตร์ของอะตอม</h4>
+                            <p>คำว่า "Atom" มาจากภาษากรีก "atomos" แปลว่า "แบ่งต่อไม่ได้" ตั้งชื่อโดยนักปรัชญากรีก เดโมคริตัส (Democritus) เมื่อ 400 ปีก่อนคริสตกาล แต่กว่ามนุษย์จะพิสูจน์ได้ว่าอะตอมมีจริง ต้องรอจนถึงต้นศตวรรษที่ 20 ผ่านแบบจำลองของทอมสัน รัทเทอร์ฟอร์ด และโบร์</p>
+                        </div>
+
+                        <h3>วิวัฒนาการแบบจำลองอะตอม</h3>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; แบบจำลองอะตอมจากอดีตสู่ปัจจุบัน</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 600 280" style="max-width: 570px; width: 100%;">
+                                    <!-- Dalton -->
+                                    <circle cx="85" cy="70" r="30" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="2"/>
+                                    <text x="85" y="75" text-anchor="middle" fill="#667eea" font-size="10">ทรงกลมตัน</text>
+                                    <text x="85" y="120" text-anchor="middle" fill="white" font-size="11" font-weight="bold">ดอลตัน</text>
+                                    <text x="85" y="135" text-anchor="middle" fill="#a0a0b8" font-size="9">(1803)</text>
+                                    <text x="85" y="155" text-anchor="middle" fill="#a0a0b8" font-size="9">อะตอมเป็น</text>
+                                    <text x="85" y="168" text-anchor="middle" fill="#a0a0b8" font-size="9">ทรงกลมตัน</text>
+                                    <text x="85" y="181" text-anchor="middle" fill="#a0a0b8" font-size="9">แบ่งแยกไม่ได้</text>
+
+                                    <!-- Arrow -->
+                                    <line x1="130" y1="70" x2="160" y2="70" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="160,66 170,70 160,74" fill="#a0a0b8"/>
+
+                                    <!-- Thomson -->
+                                    <circle cx="225" cy="70" r="30" fill="rgba(46,213,115,0.15)" stroke="#2ed573" stroke-width="2"/>
+                                    <circle cx="212" cy="60" r="5" fill="#ff6b6b"/>
+                                    <circle cx="235" cy="62" r="5" fill="#ff6b6b"/>
+                                    <circle cx="220" cy="80" r="5" fill="#ff6b6b"/>
+                                    <circle cx="240" cy="78" r="5" fill="#ff6b6b"/>
+                                    <text x="225" y="120" text-anchor="middle" fill="white" font-size="11" font-weight="bold">ทอมสัน</text>
+                                    <text x="225" y="135" text-anchor="middle" fill="#a0a0b8" font-size="9">(1904)</text>
+                                    <text x="225" y="155" text-anchor="middle" fill="#a0a0b8" font-size="9">ขนมปังลูกเกด</text>
+                                    <text x="225" y="168" text-anchor="middle" fill="#a0a0b8" font-size="9">e&#8315; ฝังอยู่ใน</text>
+                                    <text x="225" y="181" text-anchor="middle" fill="#a0a0b8" font-size="9">ประจุบวก</text>
+
+                                    <!-- Arrow -->
+                                    <line x1="270" y1="70" x2="300" y2="70" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="300,66 310,70 300,74" fill="#a0a0b8"/>
+
+                                    <!-- Rutherford -->
+                                    <circle cx="365" cy="70" r="8" fill="rgba(255,165,2,0.5)" stroke="#ffa502" stroke-width="2"/>
+                                    <circle cx="365" cy="70" r="28" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
+                                    <circle cx="393" cy="70" r="3" fill="#667eea"/>
+                                    <text x="365" y="120" text-anchor="middle" fill="white" font-size="11" font-weight="bold">รัทเทอร์ฟอร์ด</text>
+                                    <text x="365" y="135" text-anchor="middle" fill="#a0a0b8" font-size="9">(1911)</text>
+                                    <text x="365" y="155" text-anchor="middle" fill="#a0a0b8" font-size="9">นิวเคลียส+</text>
+                                    <text x="365" y="168" text-anchor="middle" fill="#a0a0b8" font-size="9">e&#8315; โคจรรอบ</text>
+                                    <text x="365" y="181" text-anchor="middle" fill="#a0a0b8" font-size="9">(ระบบสุริยะจำลอง)</text>
+
+                                    <!-- Arrow -->
+                                    <line x1="410" y1="70" x2="440" y2="70" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="440,66 450,70 440,74" fill="#a0a0b8"/>
+
+                                    <!-- Bohr -->
+                                    <circle cx="510" cy="70" r="8" fill="rgba(255,107,107,0.5)" stroke="#ff6b6b" stroke-width="2"/>
+                                    <circle cx="510" cy="70" r="18" fill="none" stroke="#667eea" stroke-width="1.5"/>
+                                    <circle cx="528" cy="70" r="3" fill="#667eea"/>
+                                    <circle cx="510" cy="70" r="28" fill="none" stroke="#2ed573" stroke-width="1.5"/>
+                                    <circle cx="510" cy="42" r="3" fill="#2ed573"/>
+                                    <text x="510" y="120" text-anchor="middle" fill="white" font-size="11" font-weight="bold">โบร์</text>
+                                    <text x="510" y="135" text-anchor="middle" fill="#a0a0b8" font-size="9">(1913)</text>
+                                    <text x="510" y="155" text-anchor="middle" fill="#a0a0b8" font-size="9">e&#8315; โคจรเป็น</text>
+                                    <text x="510" y="168" text-anchor="middle" fill="#a0a0b8" font-size="9">ระดับชั้นพลังงาน</text>
+                                    <text x="510" y="181" text-anchor="middle" fill="#a0a0b8" font-size="9">(n=1,2,3,...)</text>
+
+                                    <!-- Summary -->
+                                    <rect x="50" y="210" width="500" height="55" rx="10" fill="rgba(46,213,115,0.08)" stroke="#2ed573" stroke-width="1"/>
+                                    <text x="300" y="235" text-anchor="middle" fill="#2ed573" font-size="12" font-weight="bold">&#128161; แต่ละแบบจำลองถูกพัฒนาขึ้นเมื่อมีหลักฐานใหม่ที่แบบจำลองเดิมอธิบายไม่ได้</text>
+                                    <text x="300" y="255" text-anchor="middle" fill="#a0a0b8" font-size="11">นี่คือวิธีการทำงานของวิทยาศาสตร์ - ปรับปรุงความเข้าใจตามหลักฐาน</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>&#9883; อนุภาคมูลฐาน 3 ชนิด</h3>
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>อนุภาค</th>
+                                    <th>สัญลักษณ์</th>
+                                    <th>ประจุ</th>
+                                    <th>ตำแหน่ง</th>
+                                    <th>ผู้ค้นพบ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>โปรตอน</td>
+                                    <td>p&#8314;</td>
+                                    <td>+1</td>
+                                    <td>นิวเคลียส</td>
+                                    <td>รัทเทอร์ฟอร์ด (1919)</td>
+                                </tr>
+                                <tr>
+                                    <td>นิวตรอน</td>
+                                    <td>n&#8304;</td>
+                                    <td>0</td>
+                                    <td>นิวเคลียส</td>
+                                    <td>แชดวิก (1932)</td>
+                                </tr>
+                                <tr>
+                                    <td>อิเล็กตรอน</td>
+                                    <td>e&#8315;</td>
+                                    <td>-1</td>
+                                    <td>รอบนิวเคลียส</td>
+                                    <td>ทอมสัน (1897)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; โครงสร้างอะตอมของคาร์บอน (C)</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 400 250" style="max-width: 380px; width: 100%;">
+                                    <!-- Nucleus -->
+                                    <circle cx="200" cy="120" r="25" fill="rgba(255,107,107,0.3)" stroke="#ff6b6b" stroke-width="2"/>
+                                    <text x="200" y="115" text-anchor="middle" fill="white" font-size="10">6p&#8314;</text>
+                                    <text x="200" y="130" text-anchor="middle" fill="white" font-size="10">6n&#8304;</text>
+
+                                    <!-- Shell 1 -->
+                                    <circle cx="200" cy="120" r="55" fill="none" stroke="#667eea" stroke-width="1.5" stroke-dasharray="6,4"/>
+                                    <circle cx="155" cy="90" r="6" fill="#667eea"/>
+                                    <text x="155" y="93" text-anchor="middle" fill="white" font-size="7">e&#8315;</text>
+                                    <circle cx="245" cy="150" r="6" fill="#667eea"/>
+                                    <text x="245" y="153" text-anchor="middle" fill="white" font-size="7">e&#8315;</text>
+                                    <text x="130" y="70" fill="#667eea" font-size="10">n=1 (2e&#8315;)</text>
+
+                                    <!-- Shell 2 -->
+                                    <circle cx="200" cy="120" r="90" fill="none" stroke="#2ed573" stroke-width="1.5" stroke-dasharray="6,4"/>
+                                    <circle cx="120" cy="80" r="6" fill="#2ed573"/>
+                                    <circle cx="290" cy="120" r="6" fill="#2ed573"/>
+                                    <circle cx="200" cy="210" r="6" fill="#2ed573"/>
+                                    <circle cx="150" cy="185" r="6" fill="#2ed573"/>
+                                    <text x="310" y="60" fill="#2ed573" font-size="10">n=2 (4e&#8315;)</text>
+
+                                    <!-- Labels -->
+                                    <text x="200" y="245" text-anchor="middle" fill="white" font-size="12" font-weight="bold">คาร์บอน-12: เลขอะตอม 6, เลขมวล 12</text>
+                                </svg>
+                            </div>
+                            <p class="caption">คาร์บอนมี 6 โปรตอน 6 นิวตรอน ในนิวเคลียส และ 6 อิเล็กตรอน โคจรรอบนอก (ชั้น 1: 2 ตัว, ชั้น 2: 4 ตัว)</p>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>&#128161; จำง่าย</h4>
+                            <p><strong>เลขอะตอม</strong> = จำนวนโปรตอน (บอกว่าเป็นธาตุอะไร) | <strong>เลขมวล</strong> = โปรตอน + นิวตรอน | <strong>ในอะตอมปกติ:</strong> จำนวนโปรตอน = จำนวนอิเล็กตรอน (ทำให้เป็นกลางทางไฟฟ้า)</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3: พลังงาน -->
+                    <div class="content-card" id="ch3">
+                        <h2>บทที่ 3: พลังงาน (Energy)</h2>
+
+                        <p>พลังงาน (Energy) คือความสามารถในการทำงาน พลังงานไม่สามารถสร้างขึ้นใหม่หรือทำลายให้หายไปได้ แต่สามารถเปลี่ยนรูปจากรูปแบบหนึ่งไปเป็นอีกรูปแบบหนึ่งได้</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; กฎอนุรักษ์พลังงาน</h4>
+                            <p>กฎอนุรักษ์พลังงานถูกค้นพบโดย เจมส์ พรีสคอตต์ จูล (James Prescott Joule) นักฟิสิกส์ชาวอังกฤษ ในปี ค.ศ. 1843 เขาพิสูจน์ว่าพลังงานกลสามารถเปลี่ยนเป็นพลังงานความร้อนได้ หน่วยของพลังงาน "จูล (J)" ก็ตั้งชื่อเพื่อเป็นเกียรติแก่เขา</p>
+                        </div>
+
+                        <h3>รูปแบบของพลังงาน</h3>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; พลังงานมีหลายรูปแบบ</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 250" style="max-width: 480px; width: 100%;">
+                                    <!-- Center -->
+                                    <circle cx="250" cy="125" r="40" fill="rgba(46,213,115,0.2)" stroke="#2ed573" stroke-width="2"/>
+                                    <text x="250" y="122" text-anchor="middle" fill="#2ed573" font-size="12" font-weight="bold">พลังงาน</text>
+                                    <text x="250" y="137" text-anchor="middle" fill="#2ed573" font-size="10">เปลี่ยนรูปได้</text>
+
+                                    <!-- Types -->
+                                    <rect x="35" y="20" width="110" height="45" rx="8" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="90" y="38" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">&#9889; พลังงานไฟฟ้า</text>
+                                    <text x="90" y="53" text-anchor="middle" fill="#a0a0b8" font-size="9">กระแสไฟฟ้า</text>
+                                    <line x1="145" y1="45" x2="210" y2="100" stroke="#667eea" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="355" y="20" width="110" height="45" rx="8" fill="rgba(255,165,2,0.15)" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="410" y="38" text-anchor="middle" fill="#ffa502" font-size="11" font-weight="bold">&#127774; พลังงานแสง</text>
+                                    <text x="410" y="53" text-anchor="middle" fill="#a0a0b8" font-size="9">แสงอาทิตย์</text>
+                                    <line x1="355" y1="45" x2="290" y2="100" stroke="#ffa502" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="35" y="100" width="110" height="45" rx="8" fill="rgba(255,107,107,0.15)" stroke="#ff6b6b" stroke-width="1.5"/>
+                                    <text x="90" y="118" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">&#128293; พลังงานความร้อน</text>
+                                    <text x="90" y="133" text-anchor="middle" fill="#a0a0b8" font-size="9">อุณหภูมิ</text>
+                                    <line x1="145" y1="122" x2="210" y2="122" stroke="#ff6b6b" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="355" y="100" width="110" height="45" rx="8" fill="rgba(240,147,251,0.15)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="410" y="118" text-anchor="middle" fill="#f093fb" font-size="11" font-weight="bold">&#127925; พลังงานเสียง</text>
+                                    <text x="410" y="133" text-anchor="middle" fill="#a0a0b8" font-size="9">การสั่นสะเทือน</text>
+                                    <line x1="355" y1="122" x2="290" y2="122" stroke="#f093fb" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="120" y="195" width="110" height="45" rx="8" fill="rgba(46,213,115,0.15)" stroke="#2ed573" stroke-width="1.5"/>
+                                    <text x="175" y="213" text-anchor="middle" fill="#2ed573" font-size="11" font-weight="bold">&#127939; พลังงานจลน์</text>
+                                    <text x="175" y="228" text-anchor="middle" fill="#a0a0b8" font-size="9">การเคลื่อนที่</text>
+                                    <line x1="195" y1="195" x2="235" y2="165" stroke="#2ed573" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="270" y="195" width="110" height="45" rx="8" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="325" y="213" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">&#9968; พลังงานศักย์</text>
+                                    <text x="325" y="228" text-anchor="middle" fill="#a0a0b8" font-size="9">ตำแหน่ง/สภาพ</text>
+                                    <line x1="305" y1="195" x2="265" y2="165" stroke="#667eea" stroke-width="1" stroke-dasharray="4,3"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>&#9889; พลังงานจลน์และพลังงานศักย์</h3>
+
+                        <div class="formula-box">
+                            <span class="formula-label">พลังงานจลน์ (Kinetic Energy)</span>
+                            E<sub>k</sub> = &#189;mv&#178;
+                        </div>
+
+                        <div class="formula-box">
+                            <span class="formula-label">พลังงานศักย์โน้มถ่วง (Gravitational Potential Energy)</span>
+                            E<sub>p</sub> = mgh
+                        </div>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; การเปลี่ยนรูปพลังงาน: ลูกบอลตกจากที่สูง</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 500 200" style="max-width: 480px; width: 100%;">
+                                    <!-- Position 1: Top -->
+                                    <circle cx="80" cy="40" r="15" fill="rgba(102,126,234,0.4)" stroke="#667eea" stroke-width="2"/>
+                                    <text x="80" y="44" text-anchor="middle" fill="white" font-size="9">&#9679;</text>
+                                    <text x="80" y="75" text-anchor="middle" fill="#667eea" font-size="10" font-weight="bold">Ep = สูงสุด</text>
+                                    <text x="80" y="90" text-anchor="middle" fill="#a0a0b8" font-size="10">Ek = 0</text>
+                                    <text x="80" y="105" text-anchor="middle" fill="#ffa502" font-size="9">v = 0</text>
+
+                                    <!-- Arrow -->
+                                    <line x1="130" y1="50" x2="170" y2="70" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="170,65 180,72 168,75" fill="#a0a0b8"/>
+
+                                    <!-- Position 2: Mid -->
+                                    <circle cx="250" cy="90" r="15" fill="rgba(255,165,2,0.4)" stroke="#ffa502" stroke-width="2"/>
+                                    <text x="250" y="94" text-anchor="middle" fill="white" font-size="9">&#9679;</text>
+                                    <text x="250" y="125" text-anchor="middle" fill="#ffa502" font-size="10" font-weight="bold">Ep = ปานกลาง</text>
+                                    <text x="250" y="140" text-anchor="middle" fill="#a0a0b8" font-size="10">Ek = ปานกลาง</text>
+                                    <text x="250" y="155" text-anchor="middle" fill="#ffa502" font-size="9">กำลังเร็วขึ้น</text>
+
+                                    <!-- Arrow -->
+                                    <line x1="300" y1="100" x2="340" y2="120" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="340,115 350,122 338,125" fill="#a0a0b8"/>
+
+                                    <!-- Position 3: Bottom -->
+                                    <circle cx="420" cy="145" r="15" fill="rgba(255,107,107,0.4)" stroke="#ff6b6b" stroke-width="2"/>
+                                    <text x="420" y="149" text-anchor="middle" fill="white" font-size="9">&#9679;</text>
+                                    <text x="420" y="175" text-anchor="middle" fill="#ff6b6b" font-size="10" font-weight="bold">Ep = 0</text>
+                                    <text x="420" y="190" text-anchor="middle" fill="#a0a0b8" font-size="10">Ek = สูงสุด</text>
+                                    <text x="420" y="205" text-anchor="middle" fill="#ff6b6b" font-size="9">v = เร็วสุด</text>
+
+                                    <!-- Ground -->
+                                    <line x1="30" y1="165" x2="490" y2="165" stroke="#a0a0b8" stroke-width="1" stroke-dasharray="5,3"/>
+                                    <text x="490" y="175" text-anchor="end" fill="#a0a0b8" font-size="9">พื้น</text>
+
+                                    <!-- Summary -->
+                                    <text x="250" y="20" text-anchor="middle" fill="white" font-size="11">พลังงานรวม (Ep + Ek) = คงที่เสมอ!</text>
+                                </svg>
+                            </div>
+                            <p class="caption">เมื่อลูกบอลตกลงมา พลังงานศักย์ลดลง แต่พลังงานจลน์เพิ่มขึ้น พลังงานรวมคงที่เสมอ</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz -->
+                    <div class="quiz-section" id="quiz">
+                        <div id="scienceQuiz"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>SmartUp &copy; 2026 - ระบบการเรียนรู้ตามหลักสูตรแกนกลาง</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>if (!Auth.isLoggedIn()) { window.location.href = 'auth.html'; }</script>
+    <script>
+        const scienceQuestions = [
+            {
+                question: "กฎการเคลื่อนที่ข้อที่ 1 ของนิวตัน เรียกอีกชื่อว่าอะไร?",
+                options: ["กฎแรงโน้มถ่วง", "กฎความเฉื่อย", "กฎแรงกิริยา-ปฏิกิริยา", "กฎการอนุรักษ์พลังงาน"],
+                correct: 1,
+                explanation: "กฎข้อที่ 1 ของนิวตันเรียกว่า 'กฎความเฉื่อย' (Law of Inertia) ซึ่งบอกว่าวัตถุจะคงสภาพหยุดนิ่งหรือเคลื่อนที่ด้วยความเร็วคงที่ จนกว่าจะมีแรงภายนอกมากระทำ"
+            },
+            {
+                question: "ถ้าออกแรง 50 N ดันวัตถุมวล 10 kg วัตถุจะมีความเร่งเท่าไร?",
+                options: ["5 m/s&#178;", "500 m/s&#178;", "0.2 m/s&#178;", "50 m/s&#178;"],
+                correct: 0,
+                explanation: "จาก F = ma &#8594; a = F/m = 50/10 = 5 m/s&#178;"
+            },
+            {
+                question: "อนุภาคใดอยู่ในนิวเคลียสของอะตอม?",
+                options: ["อิเล็กตรอนและโปรตอน", "โปรตอนและนิวตรอน", "อิเล็กตรอนและนิวตรอน", "อิเล็กตรอนอย่างเดียว"],
+                correct: 1,
+                explanation: "นิวเคลียสประกอบด้วยโปรตอน (ประจุ+) และนิวตรอน (ไม่มีประจุ) ส่วนอิเล็กตรอน (ประจุ-) โคจรอยู่รอบนิวเคลียส"
+            },
+            {
+                question: "ธาตุที่มีเลขอะตอม 8 มีกี่โปรตอน?",
+                options: ["4", "8", "16", "2"],
+                correct: 1,
+                explanation: "เลขอะตอม = จำนวนโปรตอน ดังนั้นธาตุที่มีเลขอะตอม 8 ก็มีโปรตอน 8 ตัว (ซึ่งก็คือออกซิเจน)"
+            },
+            {
+                question: "เมื่อลูกบอลถูกโยนขึ้นไปสูงสุด ณ จุดสูงสุด พลังงานจลน์มีค่าเท่าไร?",
+                options: ["สูงสุด", "เท่ากับพลังงานศักย์", "เท่ากับ 0", "เป็นลบ"],
+                correct: 2,
+                explanation: "ณ จุดสูงสุด ลูกบอลหยุดชั่วขณะ (v=0) ดังนั้นพลังงานจลน์ = &#189;mv&#178; = 0 โดยพลังงานทั้งหมดเปลี่ยนเป็นพลังงานศักย์โน้มถ่วงหมด"
+            },
+            {
+                question: "ใครเป็นผู้ค้นพบอิเล็กตรอน?",
+                options: ["ดอลตัน", "รัทเทอร์ฟอร์ด", "ทอมสัน", "โบร์"],
+                correct: 2,
+                explanation: "เจ.เจ. ทอมสัน (J.J. Thomson) ค้นพบอิเล็กตรอนในปี ค.ศ. 1897 จากการทดลองกับรังสีแคโทด นำไปสู่แบบจำลองอะตอมแบบขนมปังลูกเกด"
+            },
+            {
+                question: "กฎอนุรักษ์พลังงานบอกว่าอะไร?",
+                options: ["พลังงานสร้างขึ้นใหม่ได้", "พลังงานทำลายได้", "พลังงานไม่สามารถสร้างใหม่หรือทำลายได้ แต่เปลี่ยนรูปได้", "พลังงานหมดไปเมื่อใช้"],
+                correct: 2,
+                explanation: "กฎอนุรักษ์พลังงาน: พลังงานไม่สามารถสร้างขึ้นใหม่หรือทำลายให้สูญหายได้ แต่สามารถเปลี่ยนจากรูปแบบหนึ่งไปเป็นอีกรูปแบบหนึ่งได้ และพลังงานรวมในระบบปิดจะคงที่เสมอ"
+            }
+        ];
+
+        const quiz = new QuizEngine('scienceQuiz', scienceQuestions, 'science');
+    </script>
+</body>
+</html>
