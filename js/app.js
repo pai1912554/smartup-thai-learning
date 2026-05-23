@@ -76,12 +76,17 @@ function initScrollAnimations() {
 const ProgressTracker = {
     getProgress() {
         const data = localStorage.getItem('smartup_progress');
-        return data ? JSON.parse(data) : {
+        const defaults = {
             math: { lessons: 0, quizzes: 0, totalScore: 0, totalQuestions: 0 },
             science: { lessons: 0, quizzes: 0, totalScore: 0, totalQuestions: 0 },
+            scienceM3: { lessons: 0, quizzes: 0, totalScore: 0, totalQuestions: 0 },
             english: { lessons: 0, quizzes: 0, totalScore: 0, totalQuestions: 0 },
             mathExtra: { lessons: 0, quizzes: 0, totalScore: 0, totalQuestions: 0 }
         };
+        if (!data) return defaults;
+        const parsed = JSON.parse(data);
+        for (const k in defaults) if (!parsed[k]) parsed[k] = defaults[k];
+        return parsed;
     },
 
     saveProgress(data) {
@@ -109,8 +114,8 @@ const ProgressTracker = {
 
     updateUI() {
         const data = this.getProgress();
-        const totalLessonsMap = { math: 12, science: 15, english: 12, mathExtra: 14 };
-        const subjects = ['math', 'science', 'english', 'mathExtra'];
+        const totalLessonsMap = { math: 12, science: 15, scienceM3: 3, english: 12, mathExtra: 14 };
+        const subjects = ['math', 'science', 'scienceM3', 'english', 'mathExtra'];
 
         subjects.forEach((sub, i) => {
             const total = totalLessonsMap[sub];

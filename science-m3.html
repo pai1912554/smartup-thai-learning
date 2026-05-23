@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาศาสตร์ ม.ต้น - SmartUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#9733;</span>
+                <span class="logo-text">Smart<span class="highlight">Up</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="index.html#subjects">วิชาเรียน</a></li>
+                <li><a href="#" class="active">วิทย์ ม.ต้น</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-page">
+        <div class="lesson-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">หน้าแรก</a> <span>/</span>
+                    <a href="index.html#subjects">วิชาเรียน</a> <span>/</span>
+                    <span>วิทยาศาสตร์ ม.ต้น</span>
+                </div>
+                <h1>&#129516; วิทยาศาสตร์ ม.ต้น</h1>
+                <p>พันธุกรรม DNA ยีน โครโมโซม &#8212; เข้าใจว่าทำไมเราถึงเป็นเราในทุกวันนี้</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="lesson-layout">
+                <div class="lesson-sidebar">
+                    <div class="sidebar-card">
+                        <h3>&#128214; สารบัญ</h3>
+                        <ul class="chapter-list">
+                            <li><a href="#ch1" class="active"><span class="chapter-num">1</span>DNA และโครโมโซม</a></li>
+                            <li><a href="#ch2"><span class="chapter-num">2</span>กฎของเมนเดล</a></li>
+                            <li><a href="#ch3"><span class="chapter-num">3</span>การถ่ายทอดลักษณะ</a></li>
+                            <li><a href="#quiz"><span class="chapter-num">&#10003;</span>แบบทดสอบ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lesson-content">
+
+                    <!-- Chapter 1: DNA & Chromosome -->
+                    <div class="content-card" id="ch1">
+                        <h2>บทที่ 1: DNA โครโมโซม และยีน</h2>
+
+                        <p>ทำไมเราหน้าตาคล้ายพ่อแม่? ทำไมคนมีตาสีต่างกัน? คำตอบอยู่ที่ <strong>ยีน (Gene)</strong> ซึ่งเป็นหน่วยข้อมูลที่อยู่บน <strong>DNA</strong> ภายในเซลล์ของเรา</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ที่มา: การค้นพบ DNA</h4>
+                            <p>ปี 1953 เจมส์ วัตสัน (James Watson) และฟรานซิส คริก (Francis Crick) ค้นพบโครงสร้าง DNA เกลียวคู่ (Double Helix) โดยอาศัยภาพ X-ray ของ โรซาลินด์ แฟรงคลิน (Rosalind Franklin) การค้นพบนี้ปฏิวัติวงการชีววิทยาทั้งหมด</p>
+                        </div>
+
+                        <h3>&#129516; ลำดับชั้น: เซลล์ &#8594; โครโมโซม &#8594; DNA &#8594; ยีน</h3>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; จากเซลล์สู่ยีน</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 560 250" style="max-width: 540px; width: 100%;">
+                                    <!-- Cell -->
+                                    <ellipse cx="70" cy="80" rx="45" ry="35" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="2"/>
+                                    <ellipse cx="70" cy="80" rx="15" ry="12" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="70" y="130" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">เซลล์</text>
+                                    <text x="70" y="145" text-anchor="middle" fill="#a0a0b8" font-size="9">มีนิวเคลียส</text>
+
+                                    <line x1="120" y1="80" x2="155" y2="80" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="155,76 165,80 155,84" fill="#a0a0b8"/>
+
+                                    <!-- Chromosome -->
+                                    <text x="225" y="65" text-anchor="middle" fill="white" font-size="28">&#129516;</text>
+                                    <path d="M210,70 Q205,85 210,100 Q215,85 210,70" fill="none" stroke="#2ed573" stroke-width="2.5"/>
+                                    <path d="M240,70 Q245,85 240,100 Q235,85 240,70" fill="none" stroke="#2ed573" stroke-width="2.5"/>
+                                    <line x1="210" y1="85" x2="240" y2="85" stroke="#2ed573" stroke-width="2"/>
+                                    <text x="225" y="130" text-anchor="middle" fill="#2ed573" font-size="11" font-weight="bold">โครโมโซม</text>
+                                    <text x="225" y="145" text-anchor="middle" fill="#a0a0b8" font-size="9">คนมี 23 คู่ (46 แท่ง)</text>
+
+                                    <line x1="270" y1="80" x2="305" y2="80" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="305,76 315,80 305,84" fill="#a0a0b8"/>
+
+                                    <!-- DNA Double Helix -->
+                                    <path d="M350,50 Q380,60 370,75 Q360,90 390,100 Q420,110 410,125" fill="none" stroke="#ff6b6b" stroke-width="2.5"/>
+                                    <path d="M410,50 Q380,60 390,75 Q400,90 370,100 Q340,110 350,125" fill="none" stroke="#ffa502" stroke-width="2.5"/>
+                                    <line x1="365" y1="58" x2="395" y2="58" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                    <line x1="372" y1="75" x2="388" y2="75" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                    <line x1="378" y1="92" x2="382" y2="92" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                    <line x1="372" y1="108" x2="388" y2="108" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                    <text x="380" y="145" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">DNA (เกลียวคู่)</text>
+                                    <text x="380" y="160" text-anchor="middle" fill="#a0a0b8" font-size="9">สายยาวเป็นเกลียว</text>
+
+                                    <line x1="425" y1="80" x2="460" y2="80" stroke="#a0a0b8" stroke-width="1.5"/>
+                                    <polygon points="460,76 470,80 460,84" fill="#a0a0b8"/>
+
+                                    <!-- Gene -->
+                                    <rect x="475" y="55" width="70" height="50" rx="8" fill="rgba(240,147,251,0.2)" stroke="#f093fb" stroke-width="2"/>
+                                    <text x="510" y="77" text-anchor="middle" fill="#f093fb" font-size="10" font-weight="bold">ATCG</text>
+                                    <text x="510" y="92" text-anchor="middle" fill="#f093fb" font-size="10" font-weight="bold">TAGC</text>
+                                    <text x="510" y="130" text-anchor="middle" fill="#f093fb" font-size="11" font-weight="bold">ยีน (Gene)</text>
+                                    <text x="510" y="145" text-anchor="middle" fill="#a0a0b8" font-size="9">ข้อมูลสร้างโปรตีน</text>
+
+                                    <!-- Summary -->
+                                    <rect x="30" y="175" width="500" height="60" rx="10" fill="rgba(255,165,2,0.06)" stroke="#ffa502" stroke-width="1"/>
+                                    <text x="280" y="198" text-anchor="middle" fill="#ffa502" font-size="11" font-weight="bold">&#128161; สรุป:</text>
+                                    <text x="280" y="218" text-anchor="middle" fill="#a0a0b8" font-size="10">เซลล์ มี นิวเคลียส &#8594; ข้างในมี โครโมโซม &#8594; โครโมโซมทำจาก DNA &#8594; บน DNA มี ยีน ที่เก็บข้อมูลลักษณะต่างๆ</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3>&#129516; โครโมโซมของมนุษย์</h3>
+
+                        <div class="example-box">
+                            <h4>ข้อมูลสำคัญเรื่องโครโมโซม</h4>
+                            <div class="step">
+                                <span class="step-num">1</span>
+                                <span>มนุษย์มี <strong>23 คู่ = 46 แท่ง</strong> ในทุกเซลล์ร่างกาย (เซลล์ร่างกาย = 2n = diploid)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">2</span>
+                                <span>เซลล์สืบพันธุ์ (ไข่/อสุจิ) มี <strong>23 แท่ง</strong> = ครึ่งเดียว (n = haploid)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">3</span>
+                                <span>คู่ที่ 1-22 = <strong>ออโตโซม</strong> (autosome) เหมือนกันทั้งชาย-หญิง</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">4</span>
+                                <span>คู่ที่ 23 = <strong>โครโมโซมเพศ</strong> &#8594; หญิง = <strong>XX</strong>, ชาย = <strong>XY</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; โครโมโซมเพศ: ทำไมเราเป็นชายหรือหญิง?</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 460 200" style="max-width: 440px; width: 100%;">
+                                    <!-- Mom -->
+                                    <circle cx="100" cy="40" r="25" fill="rgba(240,147,251,0.15)" stroke="#f093fb" stroke-width="2"/>
+                                    <text x="100" y="38" text-anchor="middle" fill="#f093fb" font-size="12" font-weight="bold">แม่</text>
+                                    <text x="100" y="52" text-anchor="middle" fill="#f093fb" font-size="10">XX</text>
+
+                                    <!-- Dad -->
+                                    <circle cx="360" cy="40" r="25" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="2"/>
+                                    <text x="360" y="38" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold">พ่อ</text>
+                                    <text x="360" y="52" text-anchor="middle" fill="#667eea" font-size="10">XY</text>
+
+                                    <!-- Eggs -->
+                                    <line x1="100" y1="65" x2="100" y2="90" stroke="#f093fb" stroke-width="1.5"/>
+                                    <circle cx="100" cy="105" r="15" fill="rgba(240,147,251,0.1)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="100" y="109" text-anchor="middle" fill="#f093fb" font-size="11" font-weight="bold">X</text>
+                                    <text x="100" y="130" text-anchor="middle" fill="#a0a0b8" font-size="9">ไข่ให้ X เสมอ</text>
+
+                                    <!-- Sperm -->
+                                    <line x1="340" y1="65" x2="310" y2="90" stroke="#667eea" stroke-width="1.5"/>
+                                    <line x1="380" y1="65" x2="410" y2="90" stroke="#667eea" stroke-width="1.5"/>
+
+                                    <circle cx="310" cy="105" r="15" fill="rgba(240,147,251,0.1)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="310" y="109" text-anchor="middle" fill="#f093fb" font-size="11" font-weight="bold">X</text>
+
+                                    <circle cx="410" cy="105" r="15" fill="rgba(102,126,234,0.1)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="410" y="109" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">Y</text>
+                                    <text x="360" y="130" text-anchor="middle" fill="#a0a0b8" font-size="9">อสุจิให้ X หรือ Y</text>
+
+                                    <!-- Results -->
+                                    <line x1="100" y1="120" x2="170" y2="165" stroke="#a0a0b8" stroke-width="1" stroke-dasharray="4,3"/>
+                                    <line x1="310" y1="120" x2="210" y2="165" stroke="#a0a0b8" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="155" y="155" width="65" height="35" rx="8" fill="rgba(240,147,251,0.15)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="188" y="177" text-anchor="middle" fill="#f093fb" font-size="12" font-weight="bold">XX &#9792;</text>
+
+                                    <line x1="100" y1="120" x2="290" y2="165" stroke="#a0a0b8" stroke-width="1" stroke-dasharray="4,3"/>
+                                    <line x1="410" y1="120" x2="330" y2="165" stroke="#a0a0b8" stroke-width="1" stroke-dasharray="4,3"/>
+
+                                    <rect x="275" y="155" width="65" height="35" rx="8" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="308" y="177" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold">XY &#9794;</text>
+                                </svg>
+                            </div>
+                            <p class="caption">เพศของลูกขึ้นอยู่กับอสุจิของพ่อ: ถ้าให้ X ได้ลูกสาว (XX), ถ้าให้ Y ได้ลูกชาย (XY)</p>
+                        </div>
+
+                        <h3>&#129516; DNA ประกอบด้วยอะไร?</h3>
+
+                        <p>DNA ย่อมาจาก <strong>Deoxyribonucleic Acid</strong> มีโครงสร้างเป็นเกลียวคู่ (Double Helix) เหมือนบันไดเวียน ขั้นบันไดทำจากเบส 4 ชนิดจับคู่กัน:</p>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; การจับคู่เบสใน DNA</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 460 180" style="max-width: 440px; width: 100%;">
+                                    <text x="230" y="25" text-anchor="middle" fill="white" font-size="13" font-weight="bold">เบส 4 ชนิด จับคู่เฉพาะ</text>
+
+                                    <!-- A-T pair -->
+                                    <rect x="50" y="45" width="80" height="40" rx="8" fill="rgba(255,107,107,0.2)" stroke="#ff6b6b" stroke-width="2"/>
+                                    <text x="90" y="62" text-anchor="middle" fill="#ff6b6b" font-size="14" font-weight="bold">A</text>
+                                    <text x="90" y="78" text-anchor="middle" fill="#a0a0b8" font-size="8">Adenine</text>
+
+                                    <text x="160" y="70" text-anchor="middle" fill="#ffa502" font-size="16">&#9552;&#9552;</text>
+
+                                    <rect x="190" y="45" width="80" height="40" rx="8" fill="rgba(46,213,115,0.2)" stroke="#2ed573" stroke-width="2"/>
+                                    <text x="230" y="62" text-anchor="middle" fill="#2ed573" font-size="14" font-weight="bold">T</text>
+                                    <text x="230" y="78" text-anchor="middle" fill="#a0a0b8" font-size="8">Thymine</text>
+
+                                    <text x="350" y="55" fill="#ffa502" font-size="11">A จับคู่กับ T เสมอ</text>
+                                    <text x="350" y="72" fill="#a0a0b8" font-size="10">(2 พันธะไฮโดรเจน)</text>
+
+                                    <!-- C-G pair -->
+                                    <rect x="50" y="105" width="80" height="40" rx="8" fill="rgba(102,126,234,0.2)" stroke="#667eea" stroke-width="2"/>
+                                    <text x="90" y="122" text-anchor="middle" fill="#667eea" font-size="14" font-weight="bold">C</text>
+                                    <text x="90" y="138" text-anchor="middle" fill="#a0a0b8" font-size="8">Cytosine</text>
+
+                                    <text x="160" y="130" text-anchor="middle" fill="#ffa502" font-size="16">&#9552;&#9552;&#9552;</text>
+
+                                    <rect x="190" y="105" width="80" height="40" rx="8" fill="rgba(240,147,251,0.2)" stroke="#f093fb" stroke-width="2"/>
+                                    <text x="230" y="122" text-anchor="middle" fill="#f093fb" font-size="14" font-weight="bold">G</text>
+                                    <text x="230" y="138" text-anchor="middle" fill="#a0a0b8" font-size="8">Guanine</text>
+
+                                    <text x="350" y="115" fill="#ffa502" font-size="11">C จับคู่กับ G เสมอ</text>
+                                    <text x="350" y="132" fill="#a0a0b8" font-size="10">(3 พันธะไฮโดรเจน)</text>
+
+                                    <text x="230" y="172" text-anchor="middle" fill="#ffa502" font-size="11">&#128161; จำง่าย: A-T (เอ-ที) และ C-G (ซี-จี) จับคู่กันเสมอ!</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>&#128161; ยีน คืออะไรกันแน่?</h4>
+                            <p><strong>ยีน</strong> = ส่วนหนึ่งของ DNA ที่เป็น "สูตร" สำหรับสร้างโปรตีน 1 ชนิด มนุษย์มียีนประมาณ 20,000-25,000 ยีน ยีนกำหนดลักษณะต่างๆ เช่น สีตา สีผม กรุ๊ปเลือด ส่วนสูง ฯลฯ</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2: Mendel's Laws -->
+                    <div class="content-card" id="ch2">
+                        <h2>บทที่ 2: กฎของเมนเดล (Mendel's Laws)</h2>
+
+                        <p>เกรเกอร์ เมนเดล (Gregor Mendel) บาทหลวงชาวออสเตรีย ทดลองผสมพันธุ์ <strong>ถั่วลันเตา</strong> นานกว่า 8 ปี (ค.ศ.1856-1863) จนค้นพบกฎการถ่ายทอดลักษณะทางพันธุกรรม ทำให้ได้ชื่อว่า "บิดาแห่งพันธุศาสตร์"</p>
+
+                        <div class="origin-box">
+                            <h4>&#128218; ทำไมเมนเดลเลือกถั่วลันเตา?</h4>
+                            <p>ถั่วลันเตาเหมาะมากเพราะ: (1) ปลูกง่าย โตเร็ว (2) มีลักษณะที่เห็นชัด เช่น สูง/เตี้ย เมล็ดเรียบ/ย่น (3) ผสมเกสรตัวเอง หรือผสมข้ามต้นก็ได้ (4) ลูกเยอะ เก็บข้อมูลสถิติได้</p>
+                        </div>
+
+                        <h3>&#129516; คำศัพท์พื้นฐาน</h3>
+
+                        <table class="lesson-table">
+                            <thead><tr><th>คำศัพท์</th><th>ความหมาย</th><th>ตัวอย่าง</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Allele (แอลลีล)</strong></td><td>รูปแบบของยีนในตำแหน่งเดียวกัน</td><td>ยีนสีดอก: แอลลีล B (สีม่วง) หรือ b (สีขาว)</td></tr>
+                                <tr><td><strong>Dominant (เด่น)</strong></td><td>แอลลีลที่แสดงออกเมื่อมีแม้แค่ตัวเดียว</td><td>B = สีม่วง (เด่น) &#8594; เขียน ตัวพิมพ์ใหญ่</td></tr>
+                                <tr><td><strong>Recessive (ด้อย)</strong></td><td>แอลลีลที่แสดงออกเมื่อมี 2 ตัว</td><td>b = สีขาว (ด้อย) &#8594; เขียน ตัวพิมพ์เล็ก</td></tr>
+                                <tr><td><strong>Homozygous</strong></td><td>แอลลีลเหมือนกัน 2 ตัว</td><td>BB (เด่นแท้) หรือ bb (ด้อยแท้)</td></tr>
+                                <tr><td><strong>Heterozygous</strong></td><td>แอลลีลต่างกัน</td><td>Bb (เด่นไม่แท้/พันทาง)</td></tr>
+                                <tr><td><strong>Genotype</strong></td><td>จีโนไทป์ = พันธุกรรมข้างใน</td><td>BB, Bb, bb</td></tr>
+                                <tr><td><strong>Phenotype</strong></td><td>ฟีโนไทป์ = ลักษณะที่มองเห็น</td><td>ดอกสีม่วง, ดอกสีขาว</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h3>&#129516; Punnett Square - ตารางทำนายลูก</h3>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; ผสม Bb x Bb (พ่อแม่ทั้งคู่เป็นเด่นไม่แท้)</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 460 300" style="max-width: 440px; width: 100%;">
+                                    <text x="230" y="25" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Punnett Square: Bb &#215; Bb</text>
+
+                                    <!-- Parent labels -->
+                                    <text x="110" y="55" text-anchor="middle" fill="#f093fb" font-size="12" font-weight="bold">แม่ (Bb)</text>
+                                    <text x="50" y="115" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold" transform="rotate(-90,50,115)">พ่อ (Bb)</text>
+
+                                    <!-- Column headers -->
+                                    <rect x="140" y="60" width="80" height="30" rx="5" fill="rgba(240,147,251,0.15)" stroke="#f093fb" stroke-width="1"/>
+                                    <text x="180" y="80" text-anchor="middle" fill="#f093fb" font-size="14" font-weight="bold">B</text>
+                                    <rect x="230" y="60" width="80" height="30" rx="5" fill="rgba(240,147,251,0.15)" stroke="#f093fb" stroke-width="1"/>
+                                    <text x="270" y="80" text-anchor="middle" fill="#f093fb" font-size="14" font-weight="bold">b</text>
+
+                                    <!-- Row headers -->
+                                    <rect x="70" y="100" width="60" height="60" rx="5" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="100" y="135" text-anchor="middle" fill="#667eea" font-size="14" font-weight="bold">B</text>
+                                    <rect x="70" y="170" width="60" height="60" rx="5" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="1"/>
+                                    <text x="100" y="205" text-anchor="middle" fill="#667eea" font-size="14" font-weight="bold">b</text>
+
+                                    <!-- Grid cells -->
+                                    <rect x="140" y="100" width="80" height="60" rx="5" fill="rgba(46,213,115,0.1)" stroke="#2ed573" stroke-width="1.5"/>
+                                    <text x="180" y="130" text-anchor="middle" fill="#2ed573" font-size="16" font-weight="bold">BB</text>
+                                    <text x="180" y="150" text-anchor="middle" fill="#a0a0b8" font-size="9">เด่นแท้ &#9679;</text>
+
+                                    <rect x="230" y="100" width="80" height="60" rx="5" fill="rgba(255,165,2,0.1)" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="270" y="130" text-anchor="middle" fill="#ffa502" font-size="16" font-weight="bold">Bb</text>
+                                    <text x="270" y="150" text-anchor="middle" fill="#a0a0b8" font-size="9">เด่นไม่แท้ &#9679;</text>
+
+                                    <rect x="140" y="170" width="80" height="60" rx="5" fill="rgba(255,165,2,0.1)" stroke="#ffa502" stroke-width="1.5"/>
+                                    <text x="180" y="200" text-anchor="middle" fill="#ffa502" font-size="16" font-weight="bold">Bb</text>
+                                    <text x="180" y="220" text-anchor="middle" fill="#a0a0b8" font-size="9">เด่นไม่แท้ &#9679;</text>
+
+                                    <rect x="230" y="170" width="80" height="60" rx="5" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="1.5"/>
+                                    <text x="270" y="200" text-anchor="middle" fill="#ff6b6b" font-size="16" font-weight="bold">bb</text>
+                                    <text x="270" y="220" text-anchor="middle" fill="#a0a0b8" font-size="9">ด้อย &#9675;</text>
+
+                                    <!-- Results -->
+                                    <rect x="340" y="100" width="110" height="130" rx="10" fill="rgba(255,255,255,0.03)" stroke="#a0a0b8" stroke-width="1"/>
+                                    <text x="395" y="125" text-anchor="middle" fill="white" font-size="11" font-weight="bold">ผลลัพธ์:</text>
+                                    <text x="395" y="150" text-anchor="middle" fill="#2ed573" font-size="10">BB = 1 (25%)</text>
+                                    <text x="395" y="170" text-anchor="middle" fill="#ffa502" font-size="10">Bb = 2 (50%)</text>
+                                    <text x="395" y="190" text-anchor="middle" fill="#ff6b6b" font-size="10">bb = 1 (25%)</text>
+                                    <text x="395" y="215" text-anchor="middle" fill="white" font-size="10" font-weight="bold">อัตราส่วน 3:1</text>
+
+                                    <!-- Summary -->
+                                    <rect x="70" y="250" width="380" height="35" rx="8" fill="rgba(255,165,2,0.06)" stroke="#ffa502" stroke-width="1"/>
+                                    <text x="260" y="272" text-anchor="middle" fill="#ffa502" font-size="11">&#128161; Genotype = 1:2:1 (BB:Bb:bb) | Phenotype = 3:1 (เด่น:ด้อย)</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>&#128161; กฎของเมนเดล 2 ข้อ</h4>
+                            <p><strong>กฎข้อ 1 (Law of Segregation):</strong> แอลลีลของยีนแต่ละคู่จะแยกออกจากกันตอนสร้างเซลล์สืบพันธุ์ ลูกได้รับแอลลีล 1 ตัวจากพ่อ 1 ตัวจากแม่ | <strong>กฎข้อ 2 (Law of Independent Assortment):</strong> ยีนต่างคู่กันจะถ่ายทอดอย่างอิสระไม่ขึ้นต่อกัน</p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3: Inheritance Patterns -->
+                    <div class="content-card" id="ch3">
+                        <h2>บทที่ 3: การถ่ายทอดลักษณะทางพันธุกรรม</h2>
+
+                        <p>ลักษณะบางอย่างถ่ายทอดตามกฎเมนเดลแบบเด่น/ด้อยชัดเจน แต่บางลักษณะซับซ้อนกว่านั้น มาดูรูปแบบที่สำคัญ</p>
+
+                        <h3>&#129516; ลักษณะเด่น/ด้อย ในมนุษย์</h3>
+
+                        <table class="lesson-table">
+                            <thead><tr><th>ลักษณะเด่น (Dominant)</th><th>ลักษณะด้อย (Recessive)</th></tr></thead>
+                            <tbody>
+                                <tr><td>ลิ้นม้วนได้</td><td>ลิ้นม้วนไม่ได้</td></tr>
+                                <tr><td>ติ่งหูอิสระ (ห่างจากหัว)</td><td>ติ่งหูติด (ติดกับหัว)</td></tr>
+                                <tr><td>ผมหยิก</td><td>ผมตรง</td></tr>
+                                <tr><td>มีลักยิ้ม</td><td>ไม่มีลักยิ้ม</td></tr>
+                                <tr><td>นิ้วก้อยงอได้</td><td>นิ้วก้อยตรง</td></tr>
+                                <tr><td>หัวแม่มือตั้งตรงได้ (Hitchhiker)</td><td>หัวแม่มืองอตรง</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h3>&#129516; การถ่ายทอดทางเพศ (Sex-linked)</h3>
+
+                        <div class="visual-box science">
+                            <h4>&#128202; ตาบอดสี - ลักษณะบนโครโมโซม X</h4>
+                            <div class="diagram">
+                                <svg viewBox="0 0 480 220" style="max-width: 460px; width: 100%;">
+                                    <text x="240" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="bold">ตาบอดสี: ยีนอยู่บนโครโมโซม X (X-linked recessive)</text>
+
+                                    <!-- Mom carrier -->
+                                    <circle cx="120" cy="65" r="22" fill="rgba(240,147,251,0.15)" stroke="#f093fb" stroke-width="2"/>
+                                    <text x="120" y="62" text-anchor="middle" fill="#f093fb" font-size="10" font-weight="bold">แม่</text>
+                                    <text x="120" y="75" text-anchor="middle" fill="#f093fb" font-size="9">X&#7580;X (พาหะ)</text>
+
+                                    <!-- Dad normal -->
+                                    <circle cx="360" cy="65" r="22" fill="rgba(102,126,234,0.15)" stroke="#667eea" stroke-width="2"/>
+                                    <text x="360" y="62" text-anchor="middle" fill="#667eea" font-size="10" font-weight="bold">พ่อ</text>
+                                    <text x="360" y="75" text-anchor="middle" fill="#667eea" font-size="9">XY (ปกติ)</text>
+
+                                    <!-- Children -->
+                                    <line x1="120" y1="87" x2="120" y2="120" stroke="#a0a0b8" stroke-width="1"/>
+                                    <line x1="360" y1="87" x2="360" y2="120" stroke="#a0a0b8" stroke-width="1"/>
+                                    <line x1="120" y1="120" x2="360" y2="120" stroke="#a0a0b8" stroke-width="1"/>
+
+                                    <!-- 4 children -->
+                                    <line x1="160" y1="120" x2="160" y2="145" stroke="#a0a0b8" stroke-width="1"/>
+                                    <rect x="130" y="145" width="60" height="35" rx="6" fill="rgba(240,147,251,0.1)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="160" y="162" text-anchor="middle" fill="#f093fb" font-size="9" font-weight="bold">XX</text>
+                                    <text x="160" y="174" text-anchor="middle" fill="#a0a0b8" font-size="8">ปกติ &#9792;</text>
+
+                                    <line x1="220" y1="120" x2="220" y2="145" stroke="#a0a0b8" stroke-width="1"/>
+                                    <rect x="190" y="145" width="60" height="35" rx="6" fill="rgba(240,147,251,0.1)" stroke="#f093fb" stroke-width="1.5"/>
+                                    <text x="220" y="162" text-anchor="middle" fill="#ffa502" font-size="9" font-weight="bold">X&#7580;X</text>
+                                    <text x="220" y="174" text-anchor="middle" fill="#a0a0b8" font-size="8">พาหะ &#9792;</text>
+
+                                    <line x1="300" y1="120" x2="300" y2="145" stroke="#a0a0b8" stroke-width="1"/>
+                                    <rect x="270" y="145" width="60" height="35" rx="6" fill="rgba(102,126,234,0.1)" stroke="#667eea" stroke-width="1.5"/>
+                                    <text x="300" y="162" text-anchor="middle" fill="#667eea" font-size="9" font-weight="bold">XY</text>
+                                    <text x="300" y="174" text-anchor="middle" fill="#a0a0b8" font-size="8">ปกติ &#9794;</text>
+
+                                    <line x1="360" y1="120" x2="360" y2="145" stroke="#a0a0b8" stroke-width="1"/>
+                                    <rect x="330" y="145" width="60" height="35" rx="6" fill="rgba(255,107,107,0.15)" stroke="#ff6b6b" stroke-width="1.5"/>
+                                    <text x="360" y="162" text-anchor="middle" fill="#ff6b6b" font-size="9" font-weight="bold">X&#7580;Y</text>
+                                    <text x="360" y="174" text-anchor="middle" fill="#a0a0b8" font-size="8">ตาบอดสี &#9794;</text>
+
+                                    <text x="240" y="210" text-anchor="middle" fill="#ffa502" font-size="10">&#128161; ลูกชายมีโอกาสตาบอดสี 50% แต่ลูกสาวเป็นพาหะได้ ไม่แสดงอาการ</text>
+                                </svg>
+                            </div>
+                            <p class="caption">ตาบอดสีพบในชายมากกว่าหญิง เพราะชายมี X เดียว ถ้า X นั้นมียีนด้อย ก็แสดงอาการเลย</p>
+                        </div>
+
+                        <h3>&#129516; กรุ๊ปเลือด ABO - ตัวอย่าง Multiple Alleles</h3>
+
+                        <div class="example-box">
+                            <h4>กรุ๊ปเลือดไม่ได้มีแค่เด่น/ด้อย แต่มี 3 แอลลีล!</h4>
+                            <div class="step">
+                                <span class="step-num">I&#7468;</span>
+                                <span>กำหนดกรุ๊ป A (เด่นร่วมกับ I&#7470;, เด่นเหนือ i)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">I&#7470;</span>
+                                <span>กำหนดกรุ๊ป B (เด่นร่วมกับ I&#7468;, เด่นเหนือ i)</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">i</span>
+                                <span>กำหนดกรุ๊ป O (ด้อย ต้องมี ii จึงจะเป็นกรุ๊ป O)</span>
+                            </div>
+                        </div>
+
+                        <table class="lesson-table">
+                            <thead><tr><th>กรุ๊ปเลือด</th><th>Genotype ที่เป็นไปได้</th><th>Antigen บนเม็ดเลือดแดง</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>A</strong></td><td>I&#7468;I&#7468; หรือ I&#7468;i</td><td>Antigen A</td></tr>
+                                <tr><td><strong>B</strong></td><td>I&#7470;I&#7470; หรือ I&#7470;i</td><td>Antigen B</td></tr>
+                                <tr><td><strong>AB</strong></td><td>I&#7468;I&#7470;</td><td>ทั้ง A และ B</td></tr>
+                                <tr><td><strong>O</strong></td><td>ii</td><td>ไม่มี</td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="tip-box">
+                            <h4>&#128161; สรุป</h4>
+                            <p>พันธุกรรมไม่ได้แค่ "เด่น-ด้อย" เสมอไป บางลักษณะมีหลายแอลลีล (กรุ๊ปเลือด) บางลักษณะอยู่บนโครโมโซมเพศ (ตาบอดสี) และบางลักษณะถูกควบคุมด้วยหลายยีนร่วมกัน (สีผิว, ส่วนสูง) &#8594; เรียกว่า Polygenic inheritance</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz -->
+                    <div class="quiz-section" id="quiz">
+                        <div id="scienceM3Quiz"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>SmartUp &copy; 2026 - ระบบการเรียนรู้ตามหลักสูตรแกนกลาง</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>if (!Auth.isLoggedIn()) { window.location.href = 'auth.html'; }</script>
+    <script>
+        const scienceM3Questions = [
+            {
+                question: "DNA ย่อมาจากอะไร?",
+                options: ["Deoxyribonucleic Acid", "Dinitrogen Acid", "Double Nucleic Acid", "Deoxyribose Nucleotide Acid"],
+                correct: 0,
+                explanation: "DNA ย่อมาจาก Deoxyribonucleic Acid เป็นสารพันธุกรรมที่เก็บข้อมูลทางพันธุกรรมทั้งหมดของสิ่งมีชีวิต มีโครงสร้างเกลียวคู่ (Double Helix)"
+            },
+            {
+                question: "เบสใน DNA ที่จับคู่กับ Adenine (A) คืออะไร?",
+                options: ["Cytosine (C)", "Guanine (G)", "Thymine (T)", "Uracil (U)"],
+                correct: 2,
+                explanation: "A จับคู่กับ T เสมอ (ด้วย 2 พันธะไฮโดรเจน) และ C จับคู่กับ G เสมอ (ด้วย 3 พันธะไฮโดรเจน) นี่คือกฎการจับคู่เบสของ Chargaff"
+            },
+            {
+                question: "มนุษย์มีโครโมโซมกี่แท่งในเซลล์ร่างกาย?",
+                options: ["23 แท่ง", "44 แท่ง", "46 แท่ง", "48 แท่ง"],
+                correct: 2,
+                explanation: "มนุษย์มี 46 แท่ง (23 คู่) โดยคู่ที่ 1-22 เป็นออโตโซม และคู่ที่ 23 เป็นโครโมโซมเพศ (XX = หญิง, XY = ชาย)"
+            },
+            {
+                question: "ถ้าพ่อแม่ทั้งคู่มี genotype Bb ลูกมีโอกาสเป็น bb กี่เปอร์เซ็นต์?",
+                options: ["0%", "25%", "50%", "75%"],
+                correct: 1,
+                explanation: "จาก Punnett Square: Bb x Bb &#8594; BB:Bb:Bb:bb = 1:2:1 ดังนั้น bb = 1/4 = 25%"
+            },
+            {
+                question: "ลักษณะ 'ลิ้นม้วนได้' เป็นลักษณะแบบใด?",
+                options: ["ลักษณะด้อย", "ลักษณะเด่น", "ลักษณะเด่นร่วม", "ลักษณะข่มไม่สมบูรณ์"],
+                correct: 1,
+                explanation: "ลิ้นม้วนได้เป็นลักษณะเด่น (Dominant) ส่วนลิ้นม้วนไม่ได้เป็นลักษณะด้อย (Recessive)"
+            },
+            {
+                question: "ทำไมตาบอดสีพบในเพศชายมากกว่าเพศหญิง?",
+                options: ["เพราะยีนอยู่บนโครโมโซม Y", "เพราะชายมี X เดียว ถ้ามียีนด้อยก็แสดงอาการเลย", "เพราะฮอร์โมนเพศชาย", "เพราะเพศชายมีโครโมโซมน้อยกว่า"],
+                correct: 1,
+                explanation: "ตาบอดสีเป็น X-linked recessive เพศชาย (XY) มี X เดียว ถ้า X นั้นมียีนด้อย ก็แสดงอาการเลย แต่เพศหญิง (XX) ต้องมียีนด้อยทั้ง 2 ตัวจึงจะแสดง"
+            },
+            {
+                question: "คนกรุ๊ปเลือด O มี genotype อะไร?",
+                options: ["I&#7468;I&#7468;", "I&#7468;i", "I&#7468;I&#7470;", "ii"],
+                correct: 3,
+                explanation: "กรุ๊ป O ต้องเป็น ii เท่านั้น เพราะ i เป็นแอลลีลด้อย ต้องมี 2 ตัวจึงจะแสดงออก ถ้ามี I&#7468; หรือ I&#7470; แม้แค่ตัวเดียว จะเป็นกรุ๊ป A หรือ B แทน"
+            }
+        ];
+
+        const quiz = new QuizEngine('scienceM3Quiz', scienceM3Questions, 'scienceM3');
+    </script>
+</body>
+</html>

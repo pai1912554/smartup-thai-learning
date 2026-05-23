@@ -44,6 +44,7 @@ const Auth = {
             stats: {
                 math: { score: 0, quizzes: 0, best: 0 },
                 science: { score: 0, quizzes: 0, best: 0 },
+                scienceM3: { score: 0, quizzes: 0, best: 0 },
                 english: { score: 0, quizzes: 0, best: 0 },
                 mathExtra: { score: 0, quizzes: 0, best: 0 }
             }
@@ -263,7 +264,8 @@ const Achievements = {
             'perfect_score': () => user.quizHistory && user.quizHistory.some(q => q.percent === 100),
             'all_subjects': () => {
                 const s = user.stats;
-                return s.math.quizzes > 0 && s.science.quizzes > 0 && s.english.quizzes > 0 && s.mathExtra.quizzes > 0;
+                if (!s.scienceM3) s.scienceM3 = { score: 0, quizzes: 0, best: 0 };
+                return s.math.quizzes > 0 && s.science.quizzes > 0 && s.scienceM3.quizzes > 0 && s.english.quizzes > 0 && s.mathExtra.quizzes > 0;
             },
             'xp_500': () => user.xp >= 500,
             'xp_2000': () => user.xp >= 2000,
@@ -341,12 +343,11 @@ function recordQuizResult(subject, correct, total) {
         date: new Date().toISOString()
     });
 
-    if (user.stats[subject]) {
-        user.stats[subject].quizzes++;
-        user.stats[subject].score += correct;
-        if (percent > user.stats[subject].best) {
-            user.stats[subject].best = percent;
-        }
+    if (!user.stats[subject]) user.stats[subject] = { score: 0, quizzes: 0, best: 0 };
+    user.stats[subject].quizzes++;
+    user.stats[subject].score += correct;
+    if (percent > user.stats[subject].best) {
+        user.stats[subject].best = percent;
     }
 
     Auth.saveUsers(users);
