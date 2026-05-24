@@ -357,8 +357,20 @@ function recordQuizResult(subject, correct, total) {
     else if (percent >= 80) xpEarned = 50;
     else if (percent >= 60) xpEarned = 35;
 
-    XPSystem.addXP(session.username, xpEarned, `quiz-${subject}`);
-    Achievements.check(session.username);
+    const xpResult = XPSystem.addXP(session.username, xpEarned, `quiz-${subject}`);
+    const newAchievements = Achievements.check(session.username);
+
+    // Refresh navbar XP/level display
+    if (typeof initAuthUI === 'function') {
+        try { initAuthUI(); } catch (e) {}
+    }
+
+    return {
+        xpEarned,
+        levelUp: xpResult?.levelUp || false,
+        newLevel: xpResult?.newLevel || null,
+        newAchievements: newAchievements || []
+    };
 }
 
 // ===== NAVBAR USER DISPLAY =====

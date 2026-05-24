@@ -249,8 +249,83 @@ class QuizEngine {
         else if (percent >= 40) message = '&#128161; พอใช้ ลองกลับไปอ่านเนื้อหาอีกรอบ';
         else message = '&#128218; ต้องทบทวนใหม่ ลองอ่านเนื้อหาอีกครั้ง';
 
+        ProgressTracker.updateSubject(this.subject, correct, total);
+
+        // Record to auth system (XP, achievements, level up)
+        let rewards = { xpEarned: 0, levelUp: false, newLevel: null, newAchievements: [] };
+        if (typeof recordQuizResult === 'function') {
+            const r = recordQuizResult(this.subject, correct, total);
+            if (r) rewards = r;
+        }
+
+        // Collect wrong questions for review
+        const wrongList = this.questions.map((q, idx) => ({ q, idx, ans: this.answers[idx] }))
+            .filter(x => x.ans !== x.q.correct);
+
         const resultsEl = document.getElementById('quizResults');
         if (resultsEl) {
+            // XP block
+            let xpHtml = '';
+            if (rewards.xpEarned > 0) {
+                xpHtml = `
+                    <div class="reward-xp">
+                        <span class="reward-icon">&#9889;</span>
+                        <span class="reward-text">+${rewards.xpEarned} XP</span>
+                    </div>
+                `;
+            }
+
+            // Level up block
+            let levelHtml = '';
+            if (rewards.levelUp && rewards.newLevel) {
+                levelHtml = `
+                    <div class="reward-levelup">
+                        <div class="levelup-burst">&#11088; LEVEL UP! &#11088;</div>
+                        <div class="levelup-title">Level ${rewards.newLevel.level} - ${rewards.newLevel.title}</div>
+                    </div>
+                `;
+            }
+
+            // Achievements block
+            let achHtml = '';
+            if (rewards.newAchievements && rewards.newAchievements.length > 0) {
+                achHtml = '<div class="reward-achievements"><h4>&#127942; ปลดล็อกเหรียญใหม่!</h4>';
+                rewards.newAchievements.forEach(a => {
+                    achHtml += `
+                        <div class="ach-unlock">
+                            <span class="ach-icon">${a.icon}</span>
+                            <div class="ach-info">
+                                <div class="ach-name">${a.name}</div>
+                                <div class="ach-desc">${a.desc} (+${a.xp} XP)</div>
+                            </div>
+                        </div>
+                    `;
+                });
+                achHtml += '</div>';
+            }
+
+            // Wrong answer review
+            let reviewHtml = '';
+            if (wrongList.length > 0) {
+                reviewHtml = `
+                    <details class="review-wrong">
+                        <summary>&#128269; ทบทวนข้อที่ผิด (${wrongList.length} ข้อ)</summary>
+                        <div class="review-list">
+                `;
+                wrongList.forEach(({ q, idx, ans }) => {
+                    const userAnsText = ans !== undefined ? q.options[ans] : '-';
+                    reviewHtml += `
+                        <div class="review-item">
+                            <div class="review-q">ข้อ ${idx + 1}: ${q.question}</div>
+                            <div class="review-wrong-ans">&#10007; คำตอบของคุณ: ${userAnsText}</div>
+                            <div class="review-correct-ans">&#10003; คำตอบที่ถูก: ${q.options[q.correct]}</div>
+                            <div class="review-exp">${q.explanation}</div>
+                        </div>
+                    `;
+                });
+                reviewHtml += '</div></details>';
+            }
+
             resultsEl.innerHTML = `
                 <div class="results-score">${percent}%</div>
                 <div class="results-text">${message}</div>
@@ -264,19 +339,22 @@ class QuizEngine {
                         <div class="label">ตอบผิด</div>
                     </div>
                 </div>
-                <button class="btn btn-outline" onclick="quiz.retry()">&#128260; ทำใหม่</button>
+                ${xpHtml}
+                ${levelHtml}
+                ${achHtml}
+                ${reviewHtml}
+                <div class="results-actions">
+                    <button class="btn btn-outline" onclick="quiz.retry()">&#128260; ทำใหม่</button>
+                    <a href="profile.html" class="btn btn-outline">&#128100; โปรไฟล์</a>
+                    <a href="leaderboard.html" class="btn btn-outline">&#127942; อันดับ</a>
+                    <a href="index.html#subjects" class="btn btn-primary">&#128218; เรียนวิชาอื่น</a>
+                </div>
             `;
             resultsEl.classList.add('show');
             resultsEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
         document.getElementById('submitQuiz').style.display = 'none';
-
-        ProgressTracker.updateSubject(this.subject, correct, total);
-
-        if (typeof recordQuizResult === 'function') {
-            recordQuizResult(this.subject, correct, total);
-        }
     }
 
     retry() {
